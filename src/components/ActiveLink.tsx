@@ -15,7 +15,7 @@ export default function ActiveLink({ svg, href, label}:ActiveLinkProps) {
 
     return (
         <Link href={href}>
-        <span className={`flex gap-1 py-1 px-2 rounded-md ${path === href ? "bg-blue-500 text-white" : ""}`}>
+        <span className={`flex gap-1 py-1 px-2 rounded-md ${path.startsWith(`${href}/`) || path === href ? "bg-blue-500 text-white" : ""}`}>
           {svg}
           {label}
         </span>

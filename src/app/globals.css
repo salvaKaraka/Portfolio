@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  scrollbar-gutter: stable both-edges;
+}
 
 /* width */
 ::-webkit-scrollbar {
