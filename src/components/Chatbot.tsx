@@ -84,18 +84,18 @@ function Chatbot() {
 
     // Renderiza el componente
     return (
-        <div className="fixed bottom-4 right-4 max-w-[40%] w-100">
+        <div className="fixed bottom-4 right-4 max-w-[90%] w-[400px] z-10">
             {isCollapsed ? (
                 <button
-                    className=" bg-blue-600 cursor-pointer text-white rounded-full px-3 py-2"
+                    className=" bg-blue-500 cursor-pointer text-white rounded-full px-2 py-2 absolute right-1 bottom-1"
                     onClick={() => toggleCollapsed(false)}
                 >
-                    🗨
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-hipchat" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17.802 17.292s.077 -.055 .2 -.149c1.843 -1.425 3 -3.49 3 -5.789c0 -4.286 -4.03 -7.764 -9 -7.764c-4.97 0 -9 3.478 -9 7.764c0 4.288 4.03 7.646 9 7.646c.424 0 1.12 -.028 2.088 -.084c1.262 .82 3.104 1.493 4.716 1.493c.499 0 .734 -.41 .414 -.828c-.486 -.596 -1.156 -1.551 -1.416 -2.29z" /><path d="M7.5 13.5c2.5 2.5 6.5 2.5 9 0" /></svg>
                 </button>
             ) : (
                 <div>
-                    <button className=" absolute -top-4 -left-4 bg-blue-600 cursor-pointer text-white rounded-full px-2 py-1 text-sm shadow-sm" onClick={() => toggleCollapsed(true)}>
-                        🗙
+                    <button className=" absolute -top-2 -left-2 bg-blue-600 cursor-pointer text-white rounded-full px-1 py-1 text-sm shadow-sm" onClick={() => toggleCollapsed(true)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-x" width="15" height="15" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
                     <div className="flex flex-col gap-4 max-w-xl m-auto border rounded-md p-6 pr-1 bg-gray-800/80 border-gray-700 text-white/90">
                         <div ref={container} className="flex flex-col gap-4 h-[50vh] overflow-y-auto">
