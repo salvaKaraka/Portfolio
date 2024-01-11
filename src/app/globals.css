@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -24,10 +25,10 @@
   background: #222222;
 
 }
-a{
+a:not(header a){
   color: #58a6ff;
 }
 
-a:hover{
+a:not(header a):hover{
   color: #0376fa;
 }

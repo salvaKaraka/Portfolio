@@ -9,12 +9,22 @@ type Message = {
     id: string;
 };
 
-type Props = {
-    initialMessage: string;
-    answers: Record<string, React.ReactNode>;
-}
+const initialMessage="¡Hola! Estoy diseñado para responer algunas preguntas acerca de Salvador ¿Cómo puedo ayudarte en esta ocasión?";
+const answers = {
+    Introduction:(<p className="text-pretty">Hola, Soy Salvador! Tengo mas de 5 años de experiencia como desarrollador Web y mas de 2 como Soporte IT.
+    Ademas de hacer web apps me gusta programar en Java, C, C++, Python, C#, entre otros lenguajes.
+    Soy un estudiante avanzado en las carreras de Ingeniería en Computación y Data Science en la UNLP.
+    Me recibí como Técnico Electrónico en 2021. Actualmente vivo en La Plata, Argentina.</p>),
 
-function Chatbot({ initialMessage, answers }: Props) {
+    Contact:(<p>Podes contactarme enviandome un mensaje directo por LinkedIn <a target="_blank" rel="noopener noreferrer" href="https://Linkedin.com/in/salvador-karakachoff/" >@Salvador_Karakachoff</a>,
+     Instagram <a target="_blank" rel="noopener noreferrer" href="https://Instagram.com/salva_karaka">@Salva_Karaka</a> o enviandome un correo electronico a <a target="_blank" rel="noopener noreferrer" href="mailto:salvador.karakachoff@gmail.com">salvador.karakachoff@gmail.com</a>.
+     Si queres ver algunos de mis proyectos podes visitar mi GitHub <a target="_blank" rel="noopener noreferrer" href="https://Github.com/salvakaraka">@Salvakaraka</a>.</p>),
+    
+    Unknown:(<p>Como soy un bot hay preguntas que no estoy preparado para responder, si te resulta importante que te conteste podes escribirme por alguna de mis redes.</p>),
+    Default:(<p>Lo siento, no entendi la pregunta, por favor reformulala.</p>),
+};
+
+function Chatbot() {
 
     const [messages, setMessages] = useState<Message[]>(() => initialMessage ? [
         {
@@ -74,7 +84,7 @@ function Chatbot({ initialMessage, answers }: Props) {
 
     // Renderiza el componente
     return (
-        <div className="fixed bottom-4 right-4 max-w-[85%] w-100">
+        <div className="fixed bottom-4 right-4 max-w-[40%] w-100">
             {isCollapsed ? (
                 <button
                     className=" bg-blue-600 cursor-pointer text-white rounded-full px-3 py-2"
@@ -88,7 +98,7 @@ function Chatbot({ initialMessage, answers }: Props) {
                         🗙
                     </button>
                     <div className="flex flex-col gap-4 max-w-xl m-auto border rounded-md p-6 pr-1 bg-gray-800/80 border-gray-700 text-white/90">
-                        <div ref={container} className="flex flex-col gap-4 h-[300px] overflow-y-auto">
+                        <div ref={container} className="flex flex-col gap-4 h-[50vh] overflow-y-auto">
                             {messages.map(({ id, text, type }) => (
                                 <div
                                     key={id}
@@ -120,7 +130,7 @@ function Chatbot({ initialMessage, answers }: Props) {
                                 className={`rounded-r-md border border-blue-700/80 text-white/90 px-4 py-2 font-bold ${isLoading ? "bg-slate-600 cursor-wait" : "bg-blue-600 cursor-pointer"
                                     }`}
                             >
-                                {isLoading ? "⏳" : "➤"}
+                                {isLoading ? "⟲" : "➤"}
                             </button>
                         </form>
                     </div>
