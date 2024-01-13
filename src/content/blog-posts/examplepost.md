@@ -3,9 +3,9 @@ title: "Example post"
 subtitle: "This is an example post."
 date: "2020-12-19"
 tags:
- - tag1
- - tag2
- - tag3
+ - Dev
+ - Design
+ - Business
 ---
 
 # Welcome to StackEdit!

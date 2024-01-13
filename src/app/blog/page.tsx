@@ -1,8 +1,7 @@
-import PostCard from '@/components/PostCard';
-import getPostMetadata from '@/components/getPostMetadata';
-import Link from 'next/link';
-
-
+import Browser from '@/components/blog/Browser';
+import PostCard from '@/components/blog/PostCard';
+import getPostMetadata from '@/components/blog/getPostMetadata';
+import SectionContainer from '@/components/section/SectionContainer';
 
 export default function Blog(){
 
@@ -13,7 +12,10 @@ export default function Blog(){
         
     return (
         <main className="p-4">
-            {postPreviews}
+            <SectionContainer>
+                <Browser />
+                {postPreviews}
+            </SectionContainer>
         </main>
       )
 }

@@ -2,9 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  scrollbar-gutter: stable both-edges;
+
+html {
+  font-family: "Onest Variable", system-ui, sans-serif;
+  scroll-behavior: smooth;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overscroll-behavior: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -28,10 +44,10 @@
   background: #222222;
 
 }
-a:not(header a){
+a:not(nav a){
   color: #58a6ff;
 }
 
-a:not(header a):hover{
+a:not(nav a):hover{
   color: #0376fa;
 }
