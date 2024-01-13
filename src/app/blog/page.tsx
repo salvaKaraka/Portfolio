@@ -1,5 +1,5 @@
 import Browser from '@/components/blog/Browser';
-import PostCard from '@/components/blog/PostCard';
+import PostCard from '@/components/blog/post-card/PostCard';
 import getPostMetadata from '@/components/blog/getPostMetadata';
 import SectionContainer from '@/components/section/SectionContainer';
 
@@ -11,10 +11,11 @@ export default function Blog(){
     ));
         
     return (
-        <main className="p-4">
+        <main className="p-5">
             <SectionContainer>
-                <Browser />
+            <div className='grid grid-cols-2 gap-3'>
                 {postPreviews}
+            </div>
             </SectionContainer>
         </main>
       )

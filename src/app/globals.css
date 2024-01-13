@@ -29,13 +29,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(24, 25, 28);
+  background: rgba(65, 68, 77, 0.473);
   border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #003f91;
+  background: rgba(138, 92, 246, 0.5);
   border-radius: 5px;
 }
 
@@ -43,11 +43,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #222222;
 
-}
-a:not(nav a){
-  color: #58a6ff;
-}
-
-a:not(nav a):hover{
-  color: #0376fa;
 }

@@ -11,13 +11,17 @@ const getPostMetadata = (): PostMetadata[] => {
     const postMetadata = markdownPosts.map((filename) => {
         const fileContents = fs.readFileSync(`${folder}/${filename}`, 'utf8');
         const matterResult = matter(fileContents);
-        return{
+
+        // Remove newlines from content excluding bold markers
+        const preview = matterResult.content.replace(/(\*\*.*?\*\*|[\r\n])/gs, ' ');
+
+        return {
             title: matterResult.data.title,
             date: matterResult.data.date,
-            subtitle: matterResult.data.subtitle,
+            subtitle: matterResult.data.subtitle? matterResult.data.subtitle : '↬ ✍️',
             slug: filename.replace('.md', ''),
             tags: matterResult.data.tags || [],
-            preview: matterResult.content.substring(0, 100).concat('...'),
+            preview: preview,
         };
     });
     return postMetadata;

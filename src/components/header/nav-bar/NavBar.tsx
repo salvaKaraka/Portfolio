@@ -1,10 +1,10 @@
 import ActiveLink from "./ActiveLink"
+import { primaryStyle } from "@/styles/styles"
 
 export default function NavBar() {
   return (
 
-        <nav className="py-1 px-1 flex gap-1 justify-center items-center rounded-full border backdrop-blur-2xl
-         border-black/10 bg-black/5 dark:border-white/5 dark:bg-white/10">
+        <nav className={`py-1 px-1 flex gap-1 justify-center items-center rounded-full border ${ primaryStyle } `}>
           <ActiveLink 
           href="/" 
           label="Inicio" 
