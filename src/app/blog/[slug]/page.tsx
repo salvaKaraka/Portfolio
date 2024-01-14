@@ -8,7 +8,7 @@ const Markdown = dynamic(() => import('markdown-to-jsx'));
 
 
 const getPostContent = (slug: string) => {
-    const folder = './src/content/blog-posts';
+    const folder = './src/content/posts';
     const file = `${folder}/${slug}.md`;
     const fileContent = fs.readFileSync(file, 'utf8');
     const matterResult = matter(fileContent);

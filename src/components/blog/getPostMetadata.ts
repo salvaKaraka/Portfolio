@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { PostMetadata } from '@/components/blog/PostMetadata';
 
 const getPostMetadata = async (): Promise<PostMetadata[]> => {
-    const folder = './src/content/blog-posts';
+    const folder = './src/content/posts';
 
     try {
         const files = await fs.promises.readdir(folder);
