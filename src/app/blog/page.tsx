@@ -1,14 +1,16 @@
+import dynamic from 'next/dynamic'
 import Browser from '@/components/blog/Browser';
-import PostCard from '@/components/blog/post-card/PostCard';
 import getPostMetadata from '@/components/blog/getPostMetadata';
 import SectionContainer from '@/components/section/SectionContainer';
 
-export default function Blog(){
+const PostCard = dynamic(() => import('@/components/blog/post-card/PostCard'), { ssr: false })
 
-    const postMetadata = getPostMetadata();
-    const postPreviews = postMetadata.map((post) => (
-        <PostCard key={post.slug} {...post} />
-    ));
+export default async function Blog(){
+
+    const postMetadata = await getPostMetadata();
+    const postPreviews = await Promise.all(postMetadata.map(async (post) => {
+        return(<PostCard key={post.slug} {...post} />)
+}));
         
     return (
         <main className="p-5">

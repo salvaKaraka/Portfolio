@@ -15,7 +15,7 @@ export default function ActiveLink({ svg, href, label}:ActiveLinkProps) {
     return (
         <Link href={href}>
           <div className="relative">
-            <span className={`flex justify-center items-center gap-[3px] hover:bg-black/10 dark:hover:bg-white/20 rounded-full py-1 px-4 transition ${ path === href || path.startsWith(`${href}/`) ? "bg-black/20 dark:bg-white/10" : ""}`}>
+            <span className={`flex justify-center items-center gap-[3px] hover:bg-black/10 dark:hover:bg-white/20 rounded-full py-1 px-4 transition ${ path === href || path.startsWith(`${href}/`) ? "bg-black/10 dark:bg-white/20" : ""}`}>
               {svg}
               {label}
             <div className={`rounded-full w-3 h-3 absolute top-[10px] right-[5px]`}>

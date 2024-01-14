@@ -1,9 +1,11 @@
 import fs from 'fs';
-import Markdown from 'markdown-to-jsx';
 import Link from 'next/link';
 import matter from 'gray-matter';
 import getPostMetadata from '@/components/blog/getPostMetadata';
 import SectionContainer from '@/components/section/SectionContainer';
+import dynamic from 'next/dynamic';
+const Markdown = dynamic(() => import('markdown-to-jsx'));
+
 
 const getPostContent = (slug: string) => {
     const folder = './src/content/blog-posts';
@@ -15,10 +17,12 @@ const getPostContent = (slug: string) => {
 
 
  //IMPORTANT! This function is called at build time by Next.js to generate the list of possible values for the slug.
-export const generateStaticParams = async () => {
-    const postMetadata = getPostMetadata();
+ export const generateStaticParams = async () => {
+    const postMetadata = await getPostMetadata();
     return postMetadata.map((post) => ({
-        slug: post.slug,
+        params: {
+            slug: post.slug,
+        },
     }));
 };
 

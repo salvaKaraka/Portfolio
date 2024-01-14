@@ -1,30 +1,38 @@
 import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 import { PostMetadata } from '@/components/blog/PostMetadata';
 
-const getPostMetadata = (): PostMetadata[] => {
+const getPostMetadata = async (): Promise<PostMetadata[]> => {
     const folder = './src/content/blog-posts';
-    const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith('.md'));
 
-    // Get gray-matter metadata for each post
-    const postMetadata = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`${folder}/${filename}`, 'utf8');
-        const matterResult = matter(fileContents);
+    try {
+        const files = await fs.promises.readdir(folder);
+        const markdownPosts = files.filter((file) => file.endsWith('.md'));
 
-        // Remove newlines from content excluding bold markers
-        const preview = matterResult.content.replace(/(\*\*.*?\*\*|[\r\n])/gs, ' ');
+        const postMetadata = await Promise.all(markdownPosts.map(async (filename) => {
+            const filePath = path.join(folder, filename);
+            const fileContents = await fs.promises.readFile(filePath, 'utf8');
+            const matterResult = matter(fileContents);
 
-        return {
-            title: matterResult.data.title,
-            date: matterResult.data.date,
-            subtitle: matterResult.data.subtitle? matterResult.data.subtitle : '↬ ✍️',
-            slug: filename.replace('.md', ''),
-            tags: matterResult.data.tags || [],
-            preview: preview,
-        };
-    });
-    return postMetadata;
+            // Remove newlines from content excluding bold markers
+            const preview = matterResult.content.replace(/(\*\*.*?\*\*|[\r\n])/gs, ' ');
+
+            return {
+                title: matterResult.data.title,
+                date: matterResult.data.date,
+                subtitle: matterResult.data.subtitle ? matterResult.data.subtitle : '↬ ✍️',
+                slug: filename.replace('.md', ''),
+                tags: matterResult.data.tags || [],
+                preview: preview,
+            };
+        }));
+
+        return postMetadata;
+    } catch (error) {
+        console.error(`Error reading directory ${folder}:`, error);
+        return [];
+    }
 };
 
 export default getPostMetadata;
