@@ -3,7 +3,7 @@ import Chatbot from '@/components/Chatbot'
 
 export default function Home() {
   return (
-    <main className="p-4 h-screen">
+    <main className="p-4 min-h-screen">
       <Chatbot />
     </main>
   )

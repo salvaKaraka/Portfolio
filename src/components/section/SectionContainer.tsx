@@ -7,7 +7,7 @@ type SectionProps = {
 
 export default function SectionContainer ({children, className}:SectionProps) {
   return (
-    <section className={`w-full lg:w-[1200px] mx-auto text-black/90 dark:text-white/90 ${className}`}>
+    <section className={`w-full lg:w-[1200px] mx-auto text-black/90 dark:text-white/90 items-center justify-center ${className}`}>
       {children}
     </section>
   );

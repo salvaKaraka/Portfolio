@@ -13,7 +13,7 @@ export default async function Blog(){
     ));
         
     return (
-        <main className="p-5 h-screen">
+        <main className="p-5 min-h-screen">
             <SectionContainer>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 {postPreviews}

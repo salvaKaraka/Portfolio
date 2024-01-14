@@ -2,7 +2,7 @@ import getPostMetadata from '@/components/blog/getPostMetadata';
 import SectionContainer from '@/components/section/SectionContainer';
 import { primaryStyle } from '@/styles/styles';
 
-export default async function Blog() {
+export default async function BlogLoading() {
     const postMetadataPromise = getPostMetadata();  // Obtenemos la promesa
     const postMetadata = await postMetadataPromise;  // Esperamos a que la promesa se resuelva
 

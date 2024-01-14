@@ -29,14 +29,21 @@ export default function BlogPost(props: any) {
     const slug = props.params.slug;
     const post = getPostContent(slug);
     return (
-        <main className="p-4">
-            <SectionContainer>
+        <main className="p-4 min-h-screen">
+            <SectionContainer className='divide-slate-300 dark:divide-neutral-700'>
                 <div className="my-12 text-center">
-                    <h1 className="text-2xl text-slate-600 ">{post.data.title}</h1>
+                    <Link href="/blog" className="text-slate-600 dark:text-slate-300 hover:underline"> 
+                        ← Back to blogㅤ
+                    </Link>
+                    <h1 className="text-2xl text-slate-600 dark:text-slate-300 ">{post.data.title}</h1>
                     <p className="text-slate-400 mt-2">{post.data.date}</p>
                 </div>
 
-                <article className="prose">
+                
+
+                <hr className="my-8" />
+
+                <article className="prose dark:prose-invert mx-auto text-slate-800 dark:text-slate-200">
                     <Markdown>{post.content}</Markdown>
                 </article>
             </SectionContainer>
