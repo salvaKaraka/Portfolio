@@ -10,10 +10,10 @@ export default async function Blog(){
     const postMetadata = await getPostMetadata();
     const postPreviews = await Promise.all(postMetadata.map(async (post) => {
         return(<PostCard key={post.slug} {...post} />)
-}));
+    }));
         
     return (
-        <main className="p-5">
+        <main className="p-5 h-screen">
             <SectionContainer>
             <div className='grid grid-cols-2 gap-3'>
                 {postPreviews}
