@@ -8,7 +8,10 @@ export default function NavBar() {
   const path = usePathname();
 
   const active = path === "/" ? 0 : 1;
+  const subPage = path.startsWith("/blog/") ? 0 : 1;
 
+  const backgroundHeight = (20*subPage)+60;
+  const backgroundWidth = (4*subPage)+90;
   const [backgroundPosition, setBackgroundPosition] = useState((active * 100) + 4);
   const [selectorPosition, setSelectorPosition] = useState((active * 100) + 4);
 
@@ -37,15 +40,15 @@ export default function NavBar() {
         Inicio
       </Link>
       <Link href="/blog"
-        className={`relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
+        className={`hover:text-black/50 dark:hover:text-white/50 relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
         onMouseEnter={() => handleSelectorPosition(1)}
         onMouseLeave={(i: any) => handleSelectorPosition(active)}
         onClick={() => handleBackgroundPosition(1)}>
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-blockquote size-4" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 15h15" /><path d="M21 19h-15" /><path d="M15 11h6" /><path d="M21 7h-6" /><path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /><path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /></svg>
         Blog
       </Link>
-      <div className="absolute w-24 h-[80%] rounded-full bg-black/10 dark:bg-white/10 transition-all duration-300 z-[-1]" style={{ left: `${selectorPosition}px` }}></div>
-      <div className="absolute w-24 h-[80%] rounded-full bg-black/20 dark:bg-white/20 transition-all duration-300 z-[-2]" style={{ left: `${backgroundPosition}px` }}></div>
+      <div className="absolute w-24 h-[80%] rounded-full bg-black/10 dark:bg-white/10 transition-all duration-100 z-[-1]" style={{ left: `${selectorPosition}px` }}></div>
+      <div className="absolute w-24 h-[80%] rounded-full bg-black/20 dark:bg-white/20 transition-all duration-300 z-[-2]" style={{ left: `${backgroundPosition}px`, height: `${backgroundHeight}%`, width: `${backgroundWidth}px` }}></div>
     </nav>
 
   )
