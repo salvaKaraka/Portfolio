@@ -15,16 +15,12 @@ const getPostMetadata = async (): Promise<PostMetadata[]> => {
             const fileContents = await fs.promises.readFile(filePath, 'utf8');
             const matterResult = matter(fileContents);
 
-            // Remove newlines from content excluding bold markers
-            const preview = matterResult.content.replace(/(\*\*.*?\*\*|[\r\n])/gs, ' ');
-
             return {
                 title: matterResult.data.title,
                 date: matterResult.data.date,
                 subtitle: matterResult.data.subtitle ? matterResult.data.subtitle : '↬ ✍️',
                 slug: filename.replace('.md', ''),
                 tags: matterResult.data.tags || [],
-                preview: preview,
             };
         }));
 

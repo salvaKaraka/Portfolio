@@ -12,7 +12,7 @@ export default async function Blog() {
     ));
 
     return (
-        <main className="p-5">
+        <main className="p-5 h-screen">
             <SectionContainer>
                 <div className='grid grid-cols-2 gap-3'>
                     {placeholders}
