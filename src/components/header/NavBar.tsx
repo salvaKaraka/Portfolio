@@ -11,7 +11,7 @@ export default function NavBar() {
   const subPage = path.startsWith("/blog/") ? 0 : 1;
 
   const backgroundHeight = (20*subPage)+60;
-  const backgroundWidth = (4*subPage)+90;
+  const backgroundWidth = (6*subPage)+90;
   const [backgroundPosition, setBackgroundPosition] = useState((active * 100) + 4);
   const [selectorPosition, setSelectorPosition] = useState((active * 100) + 4);
 
