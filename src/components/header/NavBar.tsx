@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
 
-    <nav id="nav" className={`origin-bottom-left py-1 px-1 flex gap-1 items-center rounded-full border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 transition-all duration-1000`}>
+    <nav id="nav" className={`origin-bottom-left py-1 px-1 flex gap-1 items-center rounded-full border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 transition-all`}>
       <Link href="/" id="nav-home"
         className={`active:bg-black/20 active:dark:bg-white/20 hover:text-black/50 dark:hover:text-white/50 relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
         onMouseEnter={() => handleSelectorPosition(0)}

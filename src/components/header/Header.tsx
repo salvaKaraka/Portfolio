@@ -30,6 +30,7 @@ export default function Header() {
             robotBtn?.classList.add("animate-spin");
             themeBtn?.classList.add("delay-1000");
             themeBtn?.classList.add("translate-y-full");
+            nav?.classList.add("duration-1000");
             nav?.classList.add("rotate-12");
             secretBtn?.classList.add("animate-bounce");
             setTimeout(() => {
@@ -45,6 +46,7 @@ export default function Header() {
                 }, 500);
                 secretBtn?.classList.remove("animate-bounce");
                 nav?.classList.remove("rotate-12");
+                nav?.classList.remove("duration-1000");
                 themeBtn?.classList.remove("delay-1000");
             }, 1500);
             
