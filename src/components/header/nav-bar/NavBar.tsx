@@ -4,7 +4,7 @@ import { primaryStyle } from "@/styles/styles"
 export default function NavBar() {
   return (
 
-        <nav className={`py-1 px-1 flex gap-1 justify-center items-center rounded-full border ${ primaryStyle } `}>
+        <nav className={`py-1 px-1 flex gap-1 justify-center items-center rounded-full border ${ primaryStyle }`}>
           <ActiveLink 
           href="/" 
           label="Inicio" 
