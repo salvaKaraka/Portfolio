@@ -19,11 +19,11 @@ const getPostContent = (slug: string) => {
  //IMPORTANT! This function is called at build time by Next.js to generate the list of possible values for the slug.
  export const generateStaticParams = async () => {
     const postMetadata = await getPostMetadata();
-    return postMetadata.map((post) => ({
+    return postMetadata? postMetadata.map((post) => ({
         params: {
             slug: post.slug,
         },
-    }));
+    })): [];
 };
 
 
