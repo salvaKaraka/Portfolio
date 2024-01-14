@@ -2,12 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Footer from '@/components/Footer'
 import Header from '@/components/header/Header'
-import SectionContainer from '@/components/section/SectionContainer'
 
 
 export const metadata: Metadata = {
-  title: 'Salvador Karakachoff - Ingeniería en computación y data science',
-  description: 'Desarrollador web con más de 5 años de experiencia. Soporte en IT. Estudiante avanzado en Ingeniería en Computación y Data Science.',
+  title: 'Salvador Karakachoff - Computer Engineering and Data Science',
+  description: 'Web Developer with over 3 years of experience. IT Support. Advanced student in Computer Engineering and Data Science.',
 }
 
 export default function RootLayout({
