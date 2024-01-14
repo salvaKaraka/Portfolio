@@ -8,49 +8,66 @@ export default function Header() {
 
     const [secretCounter, setSecretCounter] = useState(3);
 
+    function addClasses(element: any, classes: any) {
+        element?.classList.add(...classes);
+    }
+
+    function removeClasses(element: any, classes: any) {
+        element?.classList.remove(...classes);
+    }
+
+    function animateElements() {
+        const secretBtn = document.getElementById("secretBtn");
+        const nav = document.getElementById("nav");
+        const themeBtn = document.getElementById("themeBtn");
+        const selector = document.getElementById("nav-selector");
+        const selected = document.getElementById("nav-selected");
+        const robotBtn = document.getElementById("robotBtn");
+        const home = document.getElementById("nav-home");
+        const blog = document.getElementById("nav-blog");
+
+        addClasses(home, ["duration-[4000ms]", "translate-x-[6000px]"]);
+        addClasses(blog, ["duration-[4000ms]", "translate-x-[6000px]"]);
+        addClasses(selected, ["duration-[4000ms]", "translate-x-[6000px]"]);
+        addClasses(selector, ["duration-[4000ms]", "translate-x-[6000px]"]);
+
+        removeClasses(selector, ["duration-100"]);
+        removeClasses(selected, ["duration-300"]);
+        addClasses(robotBtn, ["animate-spin"]);
+        addClasses(themeBtn, ["delay-1000", "translate-y-full"]);
+        addClasses(nav, ["duration-1000", "rotate-12"]);
+        addClasses(secretBtn, ["animate-bounce"]);
+
+        setTimeout(() => {
+            removeClasses(selector, ["translate-x-[6000px]"]);
+            removeClasses(selected, ["translate-x-[6000px]"]);
+            removeClasses(home, ["translate-x-[6000px]"]);
+            removeClasses(blog, ["translate-x-[6000px]"]);
+
+            setTimeout(() => {
+                removeClasses(home, ["duration-[4000ms]"]);
+                removeClasses(blog, ["duration-[4000ms]"]);
+                removeClasses(selector, ["duration-[4000ms]"]);
+                removeClasses(selected, ["duration-[4000ms]"]);
+                addClasses(selected, ["duration-300"]);
+                addClasses(selector, ["duration-100"]);
+                removeClasses(themeBtn, ["translate-y-full"]);
+                removeClasses(robotBtn, ["animate-spin"]);
+            
+            }, 500);
+
+            removeClasses(secretBtn, ["animate-bounce"]);
+            removeClasses(nav, ["rotate-12", "duration-1000"]);
+            removeClasses(themeBtn, ["delay-1000"]);
+        }, 1500);
+    }
+
     function secretEvent() {
         setSecretCounter(secretCounter - 1);
         console.log(secretCounter);
         if (secretCounter === 0) {
             setSecretCounter(3);
-            const secretBtn = document.getElementById("secretBtn");
-            const nav = document.getElementById("nav");
-            const themeBtn = document.getElementById("themeBtn");
-            const selector = document.getElementById("nav-selector");
-            const selected = document.getElementById("nav-selected");
-            const robotBtn = document.getElementById("robotBtn");
-            
-            selector?.classList.remove("duration-100");
-            selected?.classList.remove("duration-300");
-            selected?.classList.add("duration-[4000ms]");
-            selector?.classList.add("duration-[4000ms]");
-            selector?.classList.add("translate-x-[6000px]");
-            selected?.classList.add("translate-x-[6000px]");
-
-            robotBtn?.classList.add("animate-spin");
-            themeBtn?.classList.add("delay-1000");
-            themeBtn?.classList.add("translate-y-full");
-            nav?.classList.add("duration-1000");
-            nav?.classList.add("rotate-12");
-            secretBtn?.classList.add("animate-bounce");
-            setTimeout(() => {
-                selector?.classList.remove("translate-x-[6000px]");
-                selected?.classList.remove("translate-x-[6000px]");
-                setTimeout(() => {
-                    selector?.classList.remove("duration-[4000ms]");
-                    selected?.classList.remove("duration-[4000ms]");
-                    selected?.classList.add("duration-300");
-                    selector?.classList.add("duration-100");
-                    themeBtn?.classList.remove("translate-y-full");
-                    robotBtn?.classList.remove("animate-spin");
-                }, 500);
-                secretBtn?.classList.remove("animate-bounce");
-                nav?.classList.remove("rotate-12");
-                nav?.classList.remove("duration-1000");
-                themeBtn?.classList.remove("delay-1000");
-            }, 1500);
-            
-
+            animateElements();
         }
     }
 
