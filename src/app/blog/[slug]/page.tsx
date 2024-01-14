@@ -16,14 +16,12 @@ const getPostContent = (slug: string) => {
 }
 
 
- //IMPORTANT! This function is called at build time by Next.js to generate the list of possible values for the slug.
- export const generateStaticParams = async () => {
-    const postMetadata = await getPostMetadata();
-    return postMetadata? postMetadata.map((post) => ({
-        params: {
-            slug: post.slug,
-        },
-    })): [];
+//IMPORTANT! This function is called at build time by Next.js to generate the list of possible values for the slug.
+export const generateStaticParams = async () => {
+    const posts = getPostMetadata();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
 };
 
 
@@ -33,14 +31,16 @@ export default function BlogPost(props: any) {
     return (
         <main className="p-4">
             <SectionContainer>
-                <Link href="/blog">
-                <h1>{post.data.title}</h1>
-                </Link>
-                <p>{post.data.subtitle}</p>
-                <p>{post.data.date}</p>
-                <Markdown>{post.content}</Markdown>
+                <div className="my-12 text-center">
+                    <h1 className="text-2xl text-slate-600 ">{post.data.title}</h1>
+                    <p className="text-slate-400 mt-2">{post.data.date}</p>
+                </div>
+
+                <article className="prose">
+                    <Markdown>{post.content}</Markdown>
+                </article>
             </SectionContainer>
         </main>
-      )
+    )
 }
 

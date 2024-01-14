@@ -7,15 +7,15 @@ const PostCard = dynamic(() => import('@/components/blog/post-card/PostCard'), {
 
 export default async function Blog(){
 
-    const postMetadata = await getPostMetadata();
-    const postPreviews = await Promise.all(postMetadata.map(async (post) => {
-        return(<PostCard key={post.slug} {...post} />)
-    }));
+    const postMetadata = getPostMetadata();
+    const postPreviews = postMetadata.map((post) => (
+      <PostCard key={post.slug} {...post} />
+    ));
         
     return (
         <main className="p-5 h-screen">
             <SectionContainer>
-            <div className='grid grid-cols-2 gap-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                 {postPreviews}
             </div>
             </SectionContainer>
