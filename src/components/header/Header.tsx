@@ -26,15 +26,15 @@ export default function Header() {
         const home = document.getElementById("nav-home");
         const blog = document.getElementById("nav-blog");
 
-        addClasses(home, ["duration-[4000ms]", "translate-x-[6000px]"]);
+        addClasses(home, ["duration-[3500ms]", "translate-x-[6000px]"]);
         addClasses(blog, ["duration-[4000ms]", "translate-x-[6000px]"]);
-        addClasses(selected, ["duration-[4000ms]", "translate-x-[6000px]"]);
-        addClasses(selector, ["duration-[4000ms]", "translate-x-[6000px]"]);
+        addClasses(selected, ["duration-[3000ms]", "translate-x-[6000px]"]);
+        addClasses(selector, ["duration-[3500ms]", "translate-x-[6000px]"]);
 
         removeClasses(selector, ["duration-100"]);
         removeClasses(selected, ["duration-300"]);
         addClasses(robotBtn, ["animate-spin"]);
-        addClasses(themeBtn, ["delay-1000", "translate-y-full"]);
+        addClasses(themeBtn, ["duration-[3000ms]", "translate-y-[6000px]", "rotate-[1800deg]"]);
         addClasses(nav, ["duration-1000", "rotate-12"]);
         addClasses(secretBtn, ["animate-bounce"]);
 
@@ -43,23 +43,25 @@ export default function Header() {
             removeClasses(selected, ["translate-x-[6000px]"]);
             removeClasses(home, ["translate-x-[6000px]"]);
             removeClasses(blog, ["translate-x-[6000px]"]);
+            removeClasses(themeBtn, ["translate-y-[6000px]", "rotate-[1800deg]"]);
 
             setTimeout(() => {
-                removeClasses(home, ["duration-[4000ms]"]);
+                removeClasses(themeBtn, ["duration-[3000ms]"]);
+                removeClasses(home, ["duration-[3500ms]"]);
                 removeClasses(blog, ["duration-[4000ms]"]);
-                removeClasses(selector, ["duration-[4000ms]"]);
-                removeClasses(selected, ["duration-[4000ms]"]);
+                removeClasses(selector, ["duration-[3500ms]"]);
+                removeClasses(selected, ["duration-[3000ms]"]);
                 addClasses(selected, ["duration-300"]);
                 addClasses(selector, ["duration-100"]);
-                removeClasses(themeBtn, ["translate-y-full"]);
+                
                 removeClasses(robotBtn, ["animate-spin"]);
             
-            }, 500);
+            }, 1500);
 
             removeClasses(secretBtn, ["animate-bounce"]);
             removeClasses(nav, ["rotate-12", "duration-1000"]);
-            removeClasses(themeBtn, ["delay-1000"]);
-        }, 1500);
+            
+        }, 2500);
     }
 
     function secretEvent() {
