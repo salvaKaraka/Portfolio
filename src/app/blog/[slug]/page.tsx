@@ -2,7 +2,7 @@ import fs from 'fs';
 import Link from 'next/link';
 import matter from 'gray-matter';
 import getPostMetadata from '@/components/blog/getPostMetadata';
-import TitleSectionContainer from '@/components/sections/BlogSectionContainer';
+import BlogSectionContainer from '@/components/sections/BlogSectionContainer';
 import dynamic from 'next/dynamic';
 const Markdown = dynamic(() => import('markdown-to-jsx'));
 
@@ -30,7 +30,7 @@ export default function BlogPost(props: any) {
     const post = getPostContent(slug);
     return (
         <main className="p-4 min-h-screen">
-            <TitleSectionContainer title={post.data.title} subtitle={post.data.date}>
+            <BlogSectionContainer title={post.data.title} subtitle={post.data.date}>
                 
                 <div className=' mb-8'>
                     <Link href="/blog" className="relative bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent decoration-purple-500 decoration-2 transition-all after:absolute after:-bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-gradient-to-r after:from-violet-400 after:to-purple-500 after:opacity-80 after:transition-transform after:duration-500 after:ease-spring hover:after:origin-bottom-left hover:after:scale-x-100"> 
@@ -42,7 +42,7 @@ export default function BlogPost(props: any) {
                     <Markdown>{post.content}</Markdown>
                 </article>
 
-            </TitleSectionContainer>
+            </BlogSectionContainer>
         </main>
     )
 }
