@@ -31,7 +31,8 @@ export default function BlogPost(props: any) {
     return (
         <main className="p-4 min-h-screen">
             <SectionContainer className='divide-slate-300 dark:divide-neutral-700'>
-                <div className="my-12 text-center">
+                
+                <div className="my-12 text-center max-w-4xl mx-auto">
                     <Link href="/blog" className="text-slate-600 dark:text-slate-300 hover:underline"> 
                         ← Back to blogㅤ
                     </Link>
@@ -43,7 +44,7 @@ export default function BlogPost(props: any) {
 
                 <hr className="my-8" />
 
-                <article className="prose dark:prose-invert mx-auto text-slate-800 dark:text-slate-200">
+                <article className="prose dark:prose-invert max-w-4xl mx-auto text-slate-800 dark:text-slate-200">
                     <Markdown>{post.content}</Markdown>
                 </article>
             </SectionContainer>

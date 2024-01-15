@@ -30,7 +30,7 @@ export default function NavBar() {
 
     <nav id="nav" className={`origin-bottom-left py-1 px-1 flex gap-1 items-center rounded-full border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 transition-all`}>
       <Link href="/" id="nav-home"
-        className={`active:bg-black/20 active:dark:bg-white/20 hover:text-black/50 dark:hover:text-white/50 relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
+        className={`hover:bg-black/20 hover:dark:bg-white/20 md:hover:bg-transparent md:hover:dark:bg-transparent hover:text-black dark:hover:text-white relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
         onMouseEnter={() => handleSelectorPosition(0)}
         onMouseLeave={() => handleSelectorPosition(active)}
         onClick={() => handleBackgroundPosition(0)}>
@@ -38,7 +38,7 @@ export default function NavBar() {
         Inicio
       </Link>
       <Link href="/blog" id="nav-blog"
-        className={`active:bg-black/20 active:dark:bg-white/20 hover:text-black/50 dark:hover:text-white/50 relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
+        className={`hover:bg-black/20 hover:dark:bg-white/20 md:hover:bg-transparent md:hover:dark:bg-transparent hover:text-black dark:hover:text-white relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
         onMouseEnter={() => handleSelectorPosition(1)}
         onMouseLeave={(i: any) => handleSelectorPosition(active)}
         onClick={() => handleBackgroundPosition(1)}>

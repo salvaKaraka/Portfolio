@@ -2,9 +2,10 @@
 
 export default function ThemeButton(){
 
+
     function toggleTheme() {
-      const body = document.querySelector("html");
-      body!.classList.toggle("dark");
+      const html = document.querySelector("html");
+      html!.classList.toggle("dark");
     }    
 
     return (

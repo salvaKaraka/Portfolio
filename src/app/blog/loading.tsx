@@ -13,7 +13,7 @@ export default async function BlogLoading() {
     return (
         <main className="p-5 h-screen">
             <SectionContainer>
-                <div className='grid grid-cols-2 gap-3'>
+                <div className='grid grid-cols-1 gap-3'>
                     {placeholders}
                 </div>
             </SectionContainer>
