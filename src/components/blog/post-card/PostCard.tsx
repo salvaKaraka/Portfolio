@@ -7,12 +7,11 @@ const Tags = dynamic(() => import('./Tags'), { ssr: false })
 export default function PostCard(post: PostMetadata) {
 
     return (
-        <Link href={`/blog/${post.slug}`}>
-            <div key={post.slug} className={`border backdrop-blur-2xl border-violet-500/30 dark:border-violet-500/40 p-2 rounded-xl h-40 flex flex-col justify-between hover:bg-black/10 hover:dark:bg-white/20 hover:scale-[.998] transition-all`}>
+        <Link href={`/blog/${post.slug}`} className='w-[80%] m-auto'>
+            <div key={post.slug} className={`border backdrop-blur-2xl border-neutral-400 dark:border-neutral-700 p-2 rounded-xl h-32 flex flex-col justify-between hover:bg-black/5 hover:dark:bg-white/5 hover:scale-[.998] transition-all`}>
                 <div className='overflow-hidden mb-2'>
-                    <h2 className={`text-black/90 dark:text-white/90 font-semibold truncate`}>{post.title}</h2>
-                    <p className={`text-black/40 dark:text-white/40 text-[10px] font-semibold`}>{post.date}</p>
-                    <p className={`text-gray-600 text-sm overflow-hidden line-clamp-2 mt-2`}>{post.subtitle}</p>
+                    <h2 className={`text-black/90 dark:text-white/90 text-xl font-semibold truncate`}>{post.title} - <span className={`text-black/40 dark:text-white/40 text-[12px] font-semibold`}>{post.date}</span></h2>
+                    <p className={`text-neutral-700 dark:text-neutral-400 text-md overflow-hidden line-clamp-2 mt-2`}>{post.subtitle}</p>
                 </div>
                 <Tags post={post} />
             </div>

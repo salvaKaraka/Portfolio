@@ -1,5 +1,5 @@
 import Browser from "@/components/blog/Browser"
-import SectionContainer from "@/components/section/SectionContainer"
+import SectionContainer from "@/components/sections/SectionContainer"
 
 export default function RootLayout({
   children,
