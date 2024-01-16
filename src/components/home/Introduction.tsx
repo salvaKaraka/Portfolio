@@ -6,7 +6,7 @@ export default function Introduction() {
     <SectionContainer>
       <div className="flex flex-col my-10 items-center justify-center">
         <div className='flex gap-10 justify-center items-center'>
-        <Image placeholder="blur" blurDataURL="/images/salvador_karakachoff.jpg" width={0} height={0} className=" hidden md:block w-46 rounded-xl h-auto" alt="Salvador Karakachoff" src='/images/salvador_karakachoff.jpg' />
+        <Image placeholder="blur" blurDataURL="/images/salvador_karakachoff.jpg" width={350} height={350} className=" hidden md:block rounded-xl" alt="Salvador Karakachoff" src='/images/salvador_karakachoff.jpg' />
           <h1 className=" text-6xl lg:text-8xl font-medium text-gray-900 dark:text-gray-100">
             <span>Salvador</span>
             <br />

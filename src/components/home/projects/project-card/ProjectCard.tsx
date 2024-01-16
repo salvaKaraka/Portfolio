@@ -39,7 +39,7 @@ export default function PostCard({ title, description, link, github, model, tags
                         {description}
                     </p>
                 </div>
-                <div className={`md:absolute md:-right-[7rem] md:-top-[3.5rem]`}>
+                <div className={`md:absolute md:-right-[7rem] md:-top-[3.5rem] mx-auto`}>
                     {model &&
                         <ModelCanvas height="15rem" shadowPosition={shadowPosition}>
                             <mesh rotation={[0,rotation,0]}>
