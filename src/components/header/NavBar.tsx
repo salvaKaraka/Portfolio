@@ -28,7 +28,8 @@ export default function NavBar() {
 
   return (
 
-    <nav id="nav" className={`origin-bottom-left py-2 px-1 flex gap-1 items-center rounded-full border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 transition-all`}>
+    <nav id="nav" className={`origin-bottom-left py-2 px-1 rounded-full border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 transition-all`}>
+      <div className="flex gap-1 items-center">
       <Link href="/" id="nav-home"
         className={`hover:bg-black/20 hover:dark:bg-white/20 md:hover:bg-transparent md:hover:dark:bg-transparent hover:text-black dark:hover:text-white relative flex justify-center items-center gap-[3px] w-24 rounded-full py-1 px-4 transition`}
         onMouseEnter={() => handleSelectorPosition(0)}
@@ -45,6 +46,7 @@ export default function NavBar() {
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-blockquote size-6" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 15h15" /><path d="M21 19h-15" /><path d="M15 11h6" /><path d="M21 7h-6" /><path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /><path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /></svg>
         Blog
       </Link>
+      </div>
       <div id="nav-selector" className="hidden md:block absolute w-24 h-[80%] rounded-full bg-black/10 dark:bg-white/10 transition-all duration-100 z-[-1]" style={{ left: `${selectorPosition}px` }}></div>
       <div id="nav-selected" className="hidden md:block absolute w-24 h-[80%] rounded-full bg-black/20 dark:bg-white/20 transition-all duration-300 z-[-2]" style={{ left: `${backgroundPosition}px`, height: `${backgroundHeight}%`, width: `${backgroundWidth}px` }}></div>
     </nav>
