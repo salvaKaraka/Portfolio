@@ -1,4 +1,4 @@
-import SectionContainer from "../../sections/SectionContainer";
+import HomeSectionContainer from "../../sections/HomeSectionContainer";
 import ProjectCard from "./project-card/ProjectCard";
 import dynamic from 'next/dynamic'
 
@@ -39,13 +39,8 @@ const PROJECTS = [
 export default function Projects() {
     
     return (
-        <SectionContainer className="divide-slate-300 my-10 dark:divide-neutral-700">
-            <div className="flex flex-row items-center justify-center mb-14">
-                <hr className="w-1/2 my-4 border-gray-900 dark:border-gray-100" />
-                <h1 className="text-6xl md:text-6xl lg:text-8xl font-medium text-gray-900 dark:text-gray-100">
-                    Projects
-                </h1>
-            </div>
+        <HomeSectionContainer title="Projects">
+
             <div className='grid grid-cols-1 gap-10'>
                 {PROJECTS.map(({ title, description, link, github, model, shadowPosition, tags }, index) => (
                     
@@ -63,6 +58,6 @@ export default function Projects() {
                     ))}
             </div>
 
-        </SectionContainer>
+        </HomeSectionContainer>
     )
 }

@@ -29,14 +29,13 @@ export default function PostCard({ title, description, link, github, model, tags
     }, []);
 
     return (
-        <Link href={github} className='w-full md:w-[90%] m-auto'>
-            <div className='border backdrop-blur-2xl border-neutral-400 dark:border-neutral-700 p-2 rounded-xl flex flex-col justify-between hover:bg-black/5 hover:dark:bg-white/5 hover:scale-[.998] transition-all'>
+            <div className='w-full md:w-[90%] m-auto border backdrop-blur-2xl border-neutral-400 dark:border-neutral-700 p-2 rounded-xl flex flex-col justify-between'>
 
                 <div className='mb-2'>
-                    <h2 className="text-2xl font-medium text-gray-900 dark:text-gray-100">
-                        {title}
-                    </h2>
-                    <p className="text-xl text-gray-900 dark:text-gray-100 max-w-[90%]">
+                <Link href="/" className="group text-2xl hover:text-neutral-500 transition">
+                        {title} <span className='group-hover:text-purple-500'>↗</span>
+                </Link>
+                    <p className="my-2 text-xl text-neutral-600 dark:text-neutral-400 max-w-[90%]">
                         {description}
                     </p>
                 </div>
@@ -52,6 +51,5 @@ export default function PostCard({ title, description, link, github, model, tags
 
                 <Tags tags={tags} />
             </div>
-        </Link>
     );
 }
