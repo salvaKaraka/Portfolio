@@ -18,7 +18,7 @@ export default function Model(props) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" scale={1.7} rotation={[0, 0, -Math.PI / 2]} position={[0,-0.5,0]}>
+        <group name="Sketchfab_model" scale={1.7} rotation={[0, 0, -Math.PI / 2]} position={[0,0,0]}>
           <group name="root">
             <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
               <group name="Hoja_5" position={[0, 0.057, 0.56]} rotation={[-0.262, 0, 0]}>
