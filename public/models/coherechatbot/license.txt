@@ -1,0 +1,8 @@
+Model Information:
+* title:	Attack Robot
+* source:	https://sketchfab.com/3d-models/attack-robot-d24d19b8cd874cb69cea6a64f03ea60c
+* author:	caz747 (https://sketchfab.com/caz747)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

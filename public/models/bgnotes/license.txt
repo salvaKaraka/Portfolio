@@ -1,0 +1,8 @@
+Model Information:
+* title:	Book (LowPoly)
+* source:	https://sketchfab.com/3d-models/book-lowpoly-27aa99343cc8467c8bb7e462d7963ae8
+* author:	Seb00927 (https://sketchfab.com/Seb00927)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
