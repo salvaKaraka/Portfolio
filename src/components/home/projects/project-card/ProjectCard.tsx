@@ -29,7 +29,7 @@ export default function PostCard({ title, description, link, github, model, tags
     }, []);
 
     return (
-            <div className='w-full md:w-[90%] m-auto border backdrop-blur-2xl border-neutral-400 dark:border-neutral-700 p-2 rounded-xl flex flex-col justify-between'>
+            <div className='w-full md:w-[90%] m-auto border backdrop-blur-2xl border-neutral-400 dark:border-neutral-700 p-2 rounded-xl flex flex-col justify-center align-center'>
 
                 <div className='mb-2'>
                 <Link href="/" className="group text-2xl hover:text-neutral-500 transition">
@@ -39,7 +39,7 @@ export default function PostCard({ title, description, link, github, model, tags
                         {description}
                     </p>
                 </div>
-                <div className={`lg:absolute lg:-right-[7rem] lg:-top-[3.5rem]`}>
+                <div className={`md:absolute md:-right-[7rem] md:-top-[3.5rem]`}>
                     {model &&
                         <ModelCanvas height="15rem" shadowPosition={shadowPosition}>
                             <mesh rotation={[0,rotation,0]}>
