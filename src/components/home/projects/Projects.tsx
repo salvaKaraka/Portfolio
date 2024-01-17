@@ -41,7 +41,7 @@ export default function Projects() {
     return (
         <HomeSectionContainer title="Projects">
 
-            <div className='grid grid-cols-1 gap-10'>
+            <div className='grid grid-cols-1 gap-6'>
                 {PROJECTS.map(({ title, description, link, github, model, shadowPosition, tags }, index) => (
                     
                     <ProjectCard

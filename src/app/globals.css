@@ -2,19 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  min-width: 0;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
- 
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   font-family: "Onest Variable", system-ui, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
   overscroll-behavior: none;
 }
 
@@ -27,7 +33,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: .5rem;
 }
 
 /* Track */

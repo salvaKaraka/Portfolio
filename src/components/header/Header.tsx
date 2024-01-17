@@ -28,8 +28,12 @@ export default function Header() {
 
         addClasses(home, ["duration-[3500ms]", "translate-x-[6000px]"]);
         addClasses(blog, ["duration-[4000ms]", "translate-x-[6000px]"]);
-        addClasses(selected, ["duration-[3000ms]", "translate-x-[6000px]"]);
-        addClasses(selector, ["duration-[3500ms]", "translate-x-[6000px]"]);
+        addClasses(selected, ["duration-[3000ms]"]);
+        addClasses(selector, ["duration-[3500ms]"]);
+        var selectedTranslate = selected!.style.transform;
+        var selectorTranslate = selector!.style.transform;
+        selected!.style.transform = "translateX(6000px)";
+        selector!.style.transform = "translateX(6000px)";
 
         removeClasses(selector, ["duration-100"]);
         removeClasses(selected, ["duration-300"]);
@@ -39,8 +43,8 @@ export default function Header() {
         addClasses(secretBtn, ["animate-bounce"]);
 
         setTimeout(() => {
-            removeClasses(selector, ["translate-x-[6000px]"]);
-            removeClasses(selected, ["translate-x-[6000px]"]);
+            selected!.style.transform = selectedTranslate;
+            selector!.style.transform = selectorTranslate;
             removeClasses(home, ["translate-x-[6000px]"]);
             removeClasses(blog, ["translate-x-[6000px]"]);
             removeClasses(themeBtn, ["translate-y-[6000px]", "rotate-[1800deg]"]);

@@ -12,7 +12,7 @@ type Model3DProps = {
 export default function Model3D({children, height, shadowPosition}: Model3DProps){
     
     return(
-        <Canvas style={{height:`${height}`, width:"15rem"}}>
+        <Canvas style={{height:`${height}`, width:"10rem"}}>
             <ambientLight intensity={0} />
             <OrbitControls enableZoom={false}/>
             <Suspense fallback={null}>
