@@ -43,7 +43,7 @@ export default function PostCard({ title, description, link, github, model, tags
                         </p>
                     <Tags tags={tags} />
                     </div>
-                    <div className="hover:scale-110 lg:mr-16 transition-all items-center justify-center mx-auto">
+                    <div className="cursor-grab active:cursor-grabbing hover:scale-110 lg:mr-16 transition-all items-center justify-center mx-auto">
                         {model &&
                             <ModelCanvas height="10rem" shadowPosition={shadowPosition}>
                                 <mesh scale={1.16} rotation={[0,rotation,0]}>
