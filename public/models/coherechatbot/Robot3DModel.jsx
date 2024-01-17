@@ -16,7 +16,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/models/coherechatbot/scene.gltf')
   return (
     <group {...props} dispose={null}>
-      <group scale={0.006}>
+      <group scale={0.006} position={[0,.4,0]}>
         <mesh geometry={nodes.Mouth001_Robot_0.geometry} material={materials.Robot} rotation={[-Math.PI / 2, 0, 0]} scale={100} />
       </group>
     </group>
