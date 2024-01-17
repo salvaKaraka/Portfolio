@@ -87,7 +87,7 @@ export default function Header() {
         if (secretCounter === 2) {
             secretTooltip!.classList.add("bg-yellow-500")
             secretTooltip!.classList.remove("bg-neutral-700")
-            secretTooltip!.innerHTML = "😤 <br/>Don't you hear me?!"
+            secretTooltip!.innerHTML = "😤 <br/>Do NOT click on me!!"
         }else if (secretCounter === 1) {
             secretTooltip!.classList.add("bg-orange-500")
             secretTooltip!.classList.remove("bg-yellow-500")
