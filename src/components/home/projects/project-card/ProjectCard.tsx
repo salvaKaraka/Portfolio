@@ -1,8 +1,6 @@
-"use client"
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import ModelCanvas from '../ModelCanvas';
-import { useEffect, useState } from 'react';
+import ModelCanvas from './ModelCanvas';
 
 const Tags = dynamic(() => import('./Tags'), { ssr: false })
 
@@ -29,7 +27,7 @@ export default function PostCard({ title, description, link, github, model, tags
                                     <span className='text-purple-500 group-hover:text-purple-600'>↗</span>
                             </div>
                     </Link>
-                        <p className="my-2 text-xl text-neutral-600 dark:text-neutral-400 max-w-[90%]">
+                        <p className="my-2 text-xl text-neutral-600 dark:text-neutral-400 max-w-[90%] ">
                             {description}
                         </p>
                     <Tags tags={tags} />
