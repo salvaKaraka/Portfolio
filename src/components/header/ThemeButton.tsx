@@ -1,11 +1,18 @@
 "use client"
 
 export default function ThemeButton(){
-
+  
+  const documentElement = typeof document !== 'undefined' ? document.documentElement : null;
 
     function toggleTheme() {
-      const html = document.querySelector("html");
-      html!.classList.toggle("dark");
+      if (documentElement) {  
+        documentElement.classList.add('disable-transitions'); //disable transitions to prevent flashing
+        const html = document.querySelector("html");
+        html!.classList.toggle("dark");
+        setTimeout(() => {
+          documentElement.classList.remove('disable-transitions');
+        }, 10);
+      }
     }    
 
     return (
