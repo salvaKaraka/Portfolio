@@ -1,23 +1,39 @@
+import Badge from "../Badge";
 import SectionContainer from "../sections/SectionContainer";
 import Image from 'next/image';
 
 export default function Introduction() {
   return (
-    <SectionContainer>
-      <div className="flex flex-col my-10 items-center justify-center">
-        <div className='flex gap-10 justify-center items-center'>
-        <Image placeholder="blur" blurDataURL="/images/salvador_karakachoff.jpg" width={350} height={350} className=" hidden md:block rounded-xl" alt="Salvador Karakachoff" src='/images/salvador_karakachoff.jpg' />
-          <h1 className=" text-6xl lg:text-8xl font-medium text-gray-900 dark:text-gray-100">
-            <span>Salvador</span>
-            <br />
-            <span className="text-neutral-400">Karakachoff</span>
-          </h1>
-        </div>
-        <p className="text-lg font-semibold text-pretty mt-5 text-gray-900 dark:text-gray-100 max-w-[90%]">
-          I&apos;m a software developer from Argentina. I&apos;m currently studying Computer Science at the University of Buenos Aires.
-          I&apos;m interested in web development, machine learning and computer graphics.
-        </p>
+    <SectionContainer className="flex justify-center mt-20 mb-14">
+      <div>
+      <h1
+				className="max-w-[700px]text-2xl md:text-3xl lg:text-5xl font-bold lg:gap-x-4 gap-x-2 pb-4 lg:pb-6 flex flex-wrap"
+			>
+				Hola, Soy Salvador! <a
+					href="https://linkedin.com/in/salvador-karakachoff/"
+					target="_blank"
+					rel="noopener"
+					className="flex justify-center items-center"
+				>
+					<Badge text="Disponible para trabajar"/></a
+				>
+			</h1>
+			<h2 className="text-xl lg:text-2xl opacity-90 max-w-[700px]">
+				<span className="text-purple-800/90 dark:text-purple-400/90">
+					Desarrollador Web y Soporte IT</span
+				>. Estudiante avanzado en las carreras de <span className="text-blue-800/90 dark:text-blue-400/90"
+					>Ingeniería en Computación</span
+				> y <span className="text-blue-800/90 dark:text-blue-400/90">Data Science</span>,
+				recibido de <span className="text-blue-800/90 dark:text-blue-400/90"
+					>Técnico Electrónico</span
+				>.<br /><span> La Plata</span>,
+				<span className="rounded-full bg-blue-900/70 px-2">
+				<span className="text-blue-300/90">Ar</span><span className="text-white">ge</span><span
+					className="text-yellow-300/90">n</span
+				><span className="text-white">ti</span><span className="text-blue-300/90">na</span></span>.
+			</h2>
       </div>
+      <img src="https://avatars.githubusercontent.com/u/100873582?v=4" alt="Salvador Karakachoff" className="rounded-full w-40 h-40" />
     </SectionContainer>
   )
 }
