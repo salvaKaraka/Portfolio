@@ -1,8 +1,9 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import SecretButton from "./SecretButton";
 import ThemeButton from "./ThemeButton";
+import { delay } from "framer-motion";
 
 export default function Header() {
 
@@ -15,6 +16,8 @@ export default function Header() {
     function removeClasses(element: any, classes: any) {
         element?.classList.remove(...classes);
     }
+
+    var isCompleted = false;   
 
     function animateElements() {
         const secretBtn = document.getElementById("secretBtn");
@@ -66,13 +69,40 @@ export default function Header() {
             removeClasses(nav, ["rotate-12", "duration-1000"]);
             
         }, 2500);
+    
     }
 
     function secretEvent() {
+        const secretBtn = document.getElementById("secretBtn") as HTMLAnchorElement;
         setSecretCounter(secretCounter - 1);
+        const secretTooltip = document.getElementById("secretTooltip");
+        secretTooltip?.classList.remove("scale-0");
+        secretTooltip?.classList.add("scale-100");
+    
+        setTimeout(() => {
+            secretTooltip?.classList.remove("scale-100");
+            secretTooltip?.classList.add("scale-0");
+        }, 1500);
+
+        if (secretCounter === 2) {
+            secretTooltip!.classList.add("bg-yellow-500")
+            secretTooltip!.classList.remove("bg-neutral-700")
+            secretTooltip!.innerHTML = "😤 <br/>Don't you hear me?!"
+        }else if (secretCounter === 1) {
+            secretTooltip!.classList.add("bg-orange-500")
+            secretTooltip!.classList.remove("bg-yellow-500")
+            secretTooltip!.innerHTML = "😡 <br/>I AM WARNING YOW!"
+        }else if (secretCounter === 0) {
+            secretTooltip!.classList.add("bg-red-500")
+            secretTooltip!.classList.remove("bg-orange-500")
+            secretTooltip!.innerHTML = "🤬 <br/>*&#$%!"
+        }else if (secretCounter <= -1) {
+            secretBtn!.href  = "https://www.linkedin.com/in/salvador-karakachoff/";
+            secretBtn!.target = "_blank";
+        }
+
         console.log(secretCounter);
         if (secretCounter === 0) {
-            setSecretCounter(3);
             animateElements();
         }
     }
