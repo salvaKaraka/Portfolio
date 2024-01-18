@@ -101,7 +101,6 @@ export default function Header() {
             secretBtn!.target = "_blank";
         }
 
-        console.log(secretCounter);
         if (secretCounter === 0) {
             animateElements();
         }

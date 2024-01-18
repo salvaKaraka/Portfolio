@@ -43,4 +43,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/models/bgnotes/scene.gltf')
