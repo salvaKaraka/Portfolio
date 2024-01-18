@@ -28,8 +28,8 @@ export default function Experience() {
         <HomeSectionContainer title="Experience">
                 <ol className="relative border-s border-gray-500 dark:border-gray-200 ml-3">                  
     
-                    {EXPERIENCE.map(experience => (
-                        <li className="mb-10 ms-4">
+                    {EXPERIENCE.map((experience, index) => (
+                        <li key={index} className="mb-10 ms-4">
                             <ExperienceItem {...experience}/>    
                         </li>
                     ))}
