@@ -5,7 +5,7 @@ export default function Introduction() {
 	return (
 		<SectionContainer className="mt-8">
 			<div className="flex flex-col md:flex-row items-center justify-center gap-6">
-			<img src="/images/salvador_karakachoff.webp" alt="Imagen de perfil de Salvador Karakachoff" className="rounded-full w-40 h-40" />
+			<img loading="lazy" src="/images/salvador_karakachoff.webp" alt="Imagen de perfil de Salvador Karakachoff" className="rounded-full w-40 h-40" />
 				<div>
 				<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold lg:gap-x-4 gap-x-2 items-center flex flex-wrap">
 					Hi, I&apos;m Salvador! <span className="text-sm py-1 rounded-xl bg-blue-900/80 px-2">
