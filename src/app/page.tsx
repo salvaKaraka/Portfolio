@@ -10,8 +10,8 @@ export default function Home() {
   
     <main className="p-4 min-h-screen">
       <Introduction />
-      <Projects />
       <Experience />
+      <Projects />
       <Chatbot /> 
     </main>
  

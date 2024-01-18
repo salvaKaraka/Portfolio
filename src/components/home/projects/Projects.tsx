@@ -8,32 +8,32 @@ const Notepad3DModel = dynamic(() => import('@/../public/models/bgnotes/Notepad3
 
 const PROJECTS = [
     {
-        title: "Chatbot - Habla conmigo",
+        title: "Personal Chatbot - Chat with Me",
         description:
-            "Un chatbot personalizado para responder preguntas acerca de mi trabajo. Desarrollado utilizando la API de Co:Here",
+            "A personalized chatbot to answer questions about my job. Developed using the Co:Here sorting API",
         link: "https://coherechatbot.vercel.app",
         github: "https://github.com/salvaKaraka/cohere-chatbot",
         model: <Robot3DModel />,
-        tags: ["Next.js", "React", "TypeScript", "Tailwind", ],
+        tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", ],
     },
     {
-        title: "City Bell Verde - Alquiler de Cabañas",
+        title: "City Bell Verde - Cabin Rental",
         description:
-            "Creado desde cero utilizando únicamente HTML, CSS, JavaScript y PHP. Con un SEO optimizado y un buen rendimiento.",
+            "Built from scratch using only HTML, CSS, JavaScript, and PHP. Featuring optimized SEO and excellent performance.",
         link: "https://citybellverde.com",
         github: "https://github.com/salvaKaraka/CityBellVerde",
         model: <Living3DModel/>,
         shadowPosition: -1.3,
         tags: ["HTML", "CSS", "JavaScript", "PHP"],
     },
-    {
+  /*  {
         title: "Background Notes - Tus notas como fondo de pantalla",
         description:
             "Desarrollé este sencillo programa en 2021, cuando no era capaz de recordar mis tareas. Hace que mis notas estén siempre presentes en mi fondo de pantalla. No sé si es realmente útil, pero fue divertido hacerlo! :D",
         github: "https://github.com/salvaKaraka/Background_Notes",
         model: <Notepad3DModel />,
         tags: ["Python"],
-    },
+    }, */
 ];
 
 export default function Projects() {
