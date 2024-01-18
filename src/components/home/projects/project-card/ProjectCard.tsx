@@ -18,7 +18,7 @@ type props = {
 export default function PostCard({ title, description, link, github, model, tags, shadowPosition}: props) {
 
     return (
-            <div className='w-full md:w-[90%] m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
+            <div className='w-full m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
                 <div className='flex flex-col md:flex-row '>
                     <div className='p-4'>
                     <Link href="/" className="group flex text-xl md:text-2xl hover:text-purple-600 transition">
