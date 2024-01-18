@@ -13,8 +13,8 @@ export default function SectionContainer({ children, className, title, subtitle 
 
       <div className="my-8 text-center w-full md:max-w-4xl mx-auto h-20">
 
-        <h1 className="text-6xl font-medium text-slate-700 dark:text-slate-200 ">{title}</h1>
-        <p className="text-xl text-slate-400 mt-2">{subtitle}</p>
+        <h1 className="text-5xl font-medium text-neutral-900 dark:text-neutral-100 ">{title}</h1>
+        <p className="text-lg font-medium text-neutral-600 dark:text-neutral-400 mt-6">{subtitle}</p>
       </div>
 
       <hr className="my-20" />
