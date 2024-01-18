@@ -24,7 +24,7 @@ const answers = {
 
     Foodie:(<p>I love cooking and eating; I would say it&apos;s my second passion, just before computers. When I&apos;m not programming, you&apos;ll find me in the kitchen making various dishes. While I enjoy preparing fancy, elaborate food, my absolute favorite is hamburgers.</p>),
 
-    Movies:(<p>I enjoy movies, but I don&apos;t know much about them. On the other hand, my girlfriend loves movies and often makes me watch with her. I really enjoy it; the last movie we saw was "Grand Turismo," and it was great!</p>),
+    Movies:(<p>I enjoy movies, but I don&apos;t know much about them. On the other hand, my girlfriend loves movies and often makes me watch with her. I really enjoy it; the last movie we saw was &quot;Grand Turismo&quot;, and it was great!</p>),
 
     Music:(<p>Music is the soundtrack of life! I often listen to Eminem&apos;s songs, but my musical taste is diverse. I enjoy Argentine Rock, Pop, Cuarteto, and more.</p>),
 
@@ -34,7 +34,7 @@ const answers = {
 
     Projects:(<p>I&apos;m currently working on two main projects. I can&apos;t reveal them yet, but both involve large databases and lots of backend development. Nonetheless, you can check out my latest projects on GitHub <a target="_blank" rel="noopener noreferrer" href="https://Github.com/salvakaraka">@Salvakaraka</a>.</p>),
 
-    Work:(<p>I work as IT Support at "Facultad de Ingenieria - Universidad Nacional de La Plata". Providing technical support to the entire administrative and teaching staff of the faculty involves implementing, maintaining, and configuring telephone and internet networks with over 2000 devices. Alongside this, I handle the repair of computers and electronic devices. <br/> Addressing each unique problem demands improvisation and on-the-fly learning, all while maintaining a professional approach.</p>),
+    Work:(<p>I work as IT Support at &quot;Facultad de Ingenieria - Universidad Nacional de La Plata&quot;. Providing technical support to the entire administrative and teaching staff of the faculty involves implementing, maintaining, and configuring telephone and internet networks with over 2000 devices. Alongside this, I handle the repair of computers and electronic devices. <br/> Addressing each unique problem demands improvisation and on-the-fly learning, all while maintaining a professional approach.</p>),
 
     Goodbye: (<p>Even though it&apos;s not really me, I&apos;m sure it would have been a pleasure chatting with you. I hope you stay well. Goodbye!</p>),
 
