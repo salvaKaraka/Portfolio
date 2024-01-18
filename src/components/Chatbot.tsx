@@ -86,6 +86,7 @@ function Chatbot() {
         <div id="chatbot" className="fixed bottom-4 right-4 max-w-[90%] w-[400px] z-10 text-black/90 dark:text-white/90">
             {isCollapsed ? (
                 <button
+                aria-label="Open chatbot"
                     id="robotBtn"
                     className={`group border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 rounded-full p-1 absolute right-1 bottom-1 hover:scale-105 transition-all`}
                     onClick={() => toggleCollapsed(false)}
@@ -94,7 +95,7 @@ function Chatbot() {
                 </button>
             ) : (
                 <div>
-                    <button className={`group border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 rounded-full absolute -top-2 -left-2 cursor-pointer p-1 z-10 hover:scale-105 transition-all`} 
+                    <button aria-label="Close chatbot" className={`group border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 rounded-full absolute -top-2 -left-2 cursor-pointer p-1 z-10 hover:scale-105 transition-all`} 
                     onClick={() => toggleCollapsed(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="size-5 rounded-full group-hover:bg-black/10 dark:group-hover:bg-white/30 p-[2px] transition icon icon-tabler icon-tabler-x" width="15" height="15" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
