@@ -23,7 +23,7 @@ export default function Introduction() {
 					<span className="text-blue-800/90 dark:text-blue-400/90"> IT Support</span> & <span className="text-blue-800/90 dark:text-blue-400/90">
 						Web Developer
 					</span>.
-					graduated as
+					Graduated as
 					<span className="text-blue-800/90 dark:text-blue-400/90"> Electronics Technician</span>.
 				</p>
 				</div>
