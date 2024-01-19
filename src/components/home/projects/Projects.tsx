@@ -11,7 +11,7 @@ const PROJECTS = [
         title: "Personal Chatbot - Chat with Me",
         description:
             "A personalized chatbot to answer questions about my job. Developed using the Co:Here sorting API",
-        link: "https://coherechatbot.vercel.app",
+        link: "https://chatbot.salvadorkarakachoff.com",
         model: <Robot3DModel />,
         tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", ],
     },
