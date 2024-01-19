@@ -43,8 +43,8 @@ export default function NavBar() {
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-blockquote size-6" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 15h15" /><path d="M21 19h-15" /><path d="M15 11h6" /><path d="M21 7h-6" /><path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /><path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2" /></svg>
         Blog
       </Link>
-      <div id="nav-selector" className={`absolute w-24 h-10 rounded-full ${subPage? "border border-purple-500":""} bg-black/10 dark:bg-white/10 transition-all duration-100 z-[-1]`} style={{ transform:`translateX(${selectorPosition}px)` }}></div>
-      <div id="nav-selected" className={`absolute w-24 h-10 rounded-full bg-black/20 dark:bg-white/20 transition-all duration-300 z-[-2]`} style={{ transform: `translateX(${backgroundPosition}px)`, }}></div>
+      <div id="nav-selector" className={`absolute w-24 h-10 rounded-full ${subPage? "h-6":""} bg-black/20 dark:bg-white/20 transition-all duration-100 z-[-1]`} style={{ transform:`translateX(${selectorPosition}px)` }}></div>
+      <div id="nav-selected" className={`absolute w-24 h-10 rounded-full bg-black/10 dark:bg-white/10 transition-all duration-300 z-[-2]`} style={{ transform: `translateX(${backgroundPosition}px)`, }}></div>
     </nav>
 
   )
