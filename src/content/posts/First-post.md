@@ -1,5 +1,5 @@
 ---
-title: "Wlcome to my Blog!"
+title: "Welcome to my Blog!"
 date: "2024-01-18"
 subtitle: "This marks my inaugural blog post. While it might serve as a temporary placeholder, expect more meaningful content in the coming days. Stay tuned!"
 tags:
