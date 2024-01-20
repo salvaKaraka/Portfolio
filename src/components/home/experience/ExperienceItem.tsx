@@ -32,8 +32,7 @@ export default function ExperienceItem ({ title, description, link, date } : pro
     inline-flex justify-center items-center
     py-1 px-2 md:py-2 md:px-4
     text-xs md:text-base
-    transition
-    hover:scale-110 "
+    transition"
             >See more ↗</a>
         )
     }
