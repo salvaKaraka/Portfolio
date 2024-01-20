@@ -3,7 +3,7 @@ import ExperienceItem from "./ExperienceItem";
 
 const EXPERIENCE = [
     {
-        title: 'IT Support - Faculty of Engineering, National University of La Plata',
+        title: 'IT Support - Facultad de Ingeniería, Universidad Nacional de La Plata',
         date: '2022 - Now',
         description: 'Providing technical support to the entire administrative and teaching staff of the faculty involves implementing, maintaining, and configuring telephone and internet networks with over 2000 devices. Alongside this, I handle the repair of computers and electronic devices. Addressing each unique problem demands improvisation and on-the-fly learning, all while maintaining a professional approach.',
     },
