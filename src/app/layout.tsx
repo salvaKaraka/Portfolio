@@ -17,9 +17,8 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <body  className="bg-slate-100/90 dark:bg-neutral-900 overflow-x-hidden">
 
-        <Head>
+              <Head>
           <!-- Google tag (gtag.js) -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-7TFF89Y8XW"></script>
             <script>
@@ -30,7 +29,9 @@ export default function RootLayout({
               gtag('config', 'G-7TFF89Y8XW');
             </script>
         </Head>
-        
+
+      
+      <body  className="bg-slate-100/90 dark:bg-neutral-900 overflow-x-hidden"> 
         <Header />
 
         {children}
