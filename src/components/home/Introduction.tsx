@@ -13,10 +13,9 @@ export default function Introduction() {
 							className="text-yellow-300/90">n</span
 						><span className="text-white">ti</span><span className="text-blue-300/90">na</span></span>
 				</h1>
-				<h2 className="text-xl lg:text-2xl opacity-90 max-w-[700px] text-purple-800/90 dark:text-purple-400/90 mt-2">
+				<h2 className="text-xl lg:text-xl opacity-90 max-w-[700px] text-purple-800/90 dark:text-purple-400/90 mt-2">
 					Computer Engineering
-					<span className="text-black/90 dark:text-white/90"> & </span>
-					Data Science.
+					<span className="text-black/90 dark:text-white/90">, passionate about</span> Graphics Programming.
 				</h2>
 				<p className="text-lg max-w-[600px]">
 					Currently working as
@@ -41,7 +40,11 @@ export default function Introduction() {
 
 					<SocialPil href="./CV_Salvador_Karakachoff_es.pdf">
 					<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-file-cv" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
-						CV (PDF)
+						CV en español (PDF)
+					</SocialPil>
+					<SocialPil href="./CV_Salvador_Karakachoff_en.pdf">
+					<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-file-cv" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
+						CV in english (PDF)
 					</SocialPil>
 					<SocialPil href="mailto:salvador.karakachoff@gmail.com">
 						<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-mail-filled" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" strokeWidth="0" fill="currentColor" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" strokeWidth="0" fill="currentColor" /></svg>

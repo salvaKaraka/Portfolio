@@ -1,7 +1,7 @@
 Model Information:
-* title:	Attack Robot
-* source:	https://sketchfab.com/3d-models/attack-robot-d24d19b8cd874cb69cea6a64f03ea60c
-* author:	caz747 (https://sketchfab.com/caz747)
+* title:	Sphere
+* source:	https://sketchfab.com/3d-models/sphere-c0c4239f106943e59c13cd624a6e6c8f
+* author:	sketchfab-migration (https://sketchfab.com/sketchfab-migration)
 
 Model License:
 * license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)

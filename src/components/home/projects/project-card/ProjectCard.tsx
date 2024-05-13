@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import ModelCanvas from './ModelCanvas';
-import SocialPil from '@/components/SocialPil';
 
 const Tags = dynamic(() => import('./Tags'), { ssr: false })
 
@@ -14,7 +13,7 @@ type props = {
     shadowPosition?: [number, number, number];
 }
 
-export default function PostCard({ title, description, link, model, tags, shadowPosition }: props) {
+export default function ProjectCard({ title, description, link, model, tags, shadowPosition }: props) {
 
     return (
         <div className='w-full m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
