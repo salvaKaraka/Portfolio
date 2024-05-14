@@ -130,4 +130,12 @@ body {
   #post_container ul ul {
     margin-left: -50px; /* Reduce el margen izquierdo de las listas anidadas en dispositivos móviles */
   }
+
+  #post_container img {
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  }
 }
