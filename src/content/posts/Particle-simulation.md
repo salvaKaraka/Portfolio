@@ -16,14 +16,14 @@ This is my first attempt at graphics programming using **OpenGL**. I hope you fi
 
 My goal was learning **OpenGL** basics. I used **C++** to create a particle simulation, which has **three main parts**:
 1. **Entry point:** It is the main function, which contains an *"infinite"* loop to execute each step of the simulation.
-2. **Particles:** Each particle is an instance of the same **particle object**. They have velocity, acceleration, position, color, mass, amorg others.
+2. **Particles:** Each particle is an instance of the same **particle object**. They have velocity, acceleration, position, color, mass, among others.
 3. **Collision handler:** Its function is **detecting collisions** between particles and with the environment and **modifying the particle's position, velocity, and acceleration** accordingly.
 
-Additionally, I added **gravity acceleration** to make the particles fall to the ground and a **collision damping coefficient** so the system loses kinetic force with each impact. If the collisions where elastic *(meaning the system does not lose kinetic force with collisions)*, this coeficient would be set to 1.
+Additionally, I added **gravity acceleration** to make the particles fall to the ground and a **collision damping coefficient** so the system loses kinetic force with each impact. If the collisions were elastic *(meaning the system does not lose kinetic force with collisions)*, this coeficient would be set to 1.
 
 
 ## Libraries that I used:
-* **GLFW:** *It is a library that lets us create and modify OpenGL windows and recieve inputs from the periphericals.*
+* **GLFW:** *It is a library that lets us create and modify OpenGL windows and receive inputs from the peripherals.*
 * **Glad:** *As most OpenGL functions' locations are not known at compile-time, they need to be queried at run-time. Glad solves this issue by managing these function pointers.*
 
 ## Development process:
@@ -43,13 +43,13 @@ Then I defined the particle attributes:
     std::vector<float> color;
 ```
 * **The graphics pipeline**:  
-To understand the rendering part, we first have to know how OpenGL works. It uses a resterization pipeline to go from an array of vertices specified within the program to an image on the screen:
+To understand the rendering part, we first have to know how OpenGL works. It uses a rasterization pipeline to go from an array of vertices specified within the program to an image on the screen:
 
 ![graphics_pipeline](/blog-images/Particle_simulation/graphics-pipeline.png)
    1. **Vertex Shader:** *Takes the vertex information and transforms it if necessary (for example, to apply perspective).*
    2. **Shape Assembly:** *Takes the resulting positions from applying the vertex shader and connects them according to a primitive *(point, line or polygon)*. In this case, *triangles*.*
    3. **Rasterization:** *The shapes generated previously are translated into pixels that can be displayed on the screen.*
-   4. **Fragment Shader:** *Computes the expeected color of each pixel of the primitive.*
+   4. **Fragment Shader:** *Computes the expected color of each pixel of the primitive.*
    5. **Test and Blending:** *In case of having overlapping objects, their colors are "blended" depending on their opacity and other factors.*
 
 * **Particle rendering:**  
@@ -61,7 +61,7 @@ To do so, I first had to **calculate the position of each vertex and store it in
 
 ```
     std::vector<float> vertices;
-    for (int i = 0; i < steps; ++i) { //steps is the ammount of vertices that we will calculate
+    for (int i = 0; i < steps; ++i) { //steps is the amount of vertices that we will calculate
         float x = pos[0] + radius * cos(angle * i); //pos is the position of the center of the circle
         float y = pos[1] + radius * sin(angle * i);
         vertices.push_back(x);
@@ -73,7 +73,7 @@ Buffers are useful because they can be used to **send large amounts of data to t
 *I'm not displaying the code here because it's pretty standard, but if you're interested, you can check the [Source code](https://github.com/salvaKaraka/Particle_simulation).*
 
 * **Collision handler:**  
-It's job is to detect collisions and respond according laws of physics, ensuring that the particles interact realistically with each other and with the boundaries of the simulation environment.
+Its job is to detect collisions and respond according laws of physics, ensuring that the particles interact realistically with each other and with the boundaries of the simulation environment.
 The Collision Handler consists of two main functions: **handleBorderCollisions** and **handleParticleCollisions**:
    1. **Border Collisions**: The handleBorderCollisions function detects collisions between the particles and the boundaries of the simulation area. If a particle collides with a border, its velocity in that direction is inverted and a damping factor is applied to simulate the loss of energy in the collision.
 
