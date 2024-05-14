@@ -3,6 +3,7 @@ import './globals.css'
 import Footer from '@/components/Footer'
 import Header from '@/components/header/Header'
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'Salvador Karakachoff - Computer Engineering and Data Science',
@@ -22,6 +23,7 @@ export default function RootLayout({
 
         {children}
         <Analytics/>
+        <SpeedInsights/>
         <Footer />
 
       </body>
