@@ -141,26 +141,26 @@ The Collision Handler consists of two main functions: **handleBorderCollisions**
 
    * **Position Update:** The **updatePositions** function is responsible for updating the positions of the particles at each simulation step. First, it updates the properties of each particle, such as velocity and position, according to external forces like gravity. Then, using the previously mentioned functions, it checks for collisions with the boundaries and between the particles themselves, adjusting positions and velocities accordingly.
 
-        void CollisionHandler::updatePositions() {
-            for (Particle& p : particles) {
+            void CollisionHandler::updatePositions() {
+                for (Particle& p : particles) {
         
-                // Update particle properties
-                p.setXVelocity(p.getXVelocity() + p.getXAcceleration() * dt);
-                p.setYVelocity(p.getYVelocity() + p.getYAcceleration() * dt - gravity * dt);
+                    // Update particle properties
+                    p.setXVelocity(p.getXVelocity() + p.getXAcceleration() * dt);
+                    p.setYVelocity(p.getYVelocity() + p.getYAcceleration() * dt - gravity * dt);
         
-                p.setXPosition(p.getXPosition() + p.getXVelocity() * dt);
-                p.setYPosition(p.getYPosition() + p.getYVelocity() * dt);
+                    p.setXPosition(p.getXPosition() + p.getXVelocity() * dt);
+                    p.setYPosition(p.getYPosition() + p.getYVelocity() * dt);
         
-                // Check border collisions
-                handleBorderCollisions(p);
+                    // Check border collisions
+                    handleBorderCollisions(p);
         
-                // Check particle collisions
-                for (Particle& p2 : particles) {
-                    handleParticleCollisions(p, p2);
-                }
+                    // Check particle collisions
+                    for (Particle& p2 : particles) {
+                        handleParticleCollisions(p, p2);
+                    }
         
-                p.draw();
-            }}
+                    p.draw();
+                }}
            
 
    * **Other functions:** In addition to the main functions, the Collision Handler includes auxiliary functions to calculate distances, dot products, and normalize vectors. These functions are used in the computation of collisions between particles. you can check them out **[Here](https://github.com/salvaKaraka/Particle_simulation).**  
