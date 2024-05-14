@@ -19,7 +19,7 @@ My goal was learning **OpenGL** basics. I used **C++** to create a particle simu
 2. **Particles:** Each particle is an instance of the same **particle object**. They have velocity, acceleration, position, color, mass, amorg others.
 3. **Collision handler:** Its function is **detecting collisions** between particles and with the environment and **modifying the particle's position, velocity, and acceleration** accordingly.
 
-Additionally, I added **gravity acceleration** to make the particles fall to the ground and a **collision damping coeficient** so the system loses kinetic force with each impact. If the collisions where elastic *(meaning the system does not lose kinetic force with collisions)*, this coeficient would be set to 1.
+Additionally, I added **gravity acceleration** to make the particles fall to the ground and a **collision damping coefficient** so the system loses kinetic force with each impact. If the collisions where elastic *(meaning the system does not lose kinetic force with collisions)*, this coeficient would be set to 1.
 
 
 ## Libraries that I used:
@@ -31,7 +31,7 @@ Additionally, I added **gravity acceleration** to make the particles fall to the
 I started creating the main window using **GLFW**, then I initialized **Glad**. *I'm not going to go into much detail since it's not the focus of this project, but if you want to know how I did it, you can check the [Source code](https://github.com/salvaKaraka/Particle_simulation).*
 
 * **Particle Object:**  
-It has the following attributes:
+Then I defined the particle attributes:
 
 ```
     std::vector<float> position;
@@ -43,7 +43,7 @@ It has the following attributes:
     std::vector<float> color;
 ```
 * **The graphics pipeline**:  
-OpenGL uses a resterization pipeline to go from an array of vertices specified within the program to an image on the screen:
+To understand the rendering part, we first have to know how OpenGL works. It uses a resterization pipeline to go from an array of vertices specified within the program to an image on the screen:
 
 ![graphics_pipeline](/blog-images/Particle_simulation/graphics-pipeline.png)
    1. **Vertex Shader:** *Takes the vertex information and transforms it if necessary (for example, to apply perspective).*
