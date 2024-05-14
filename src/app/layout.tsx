@@ -21,11 +21,11 @@ export default function RootLayout({
         <Header />
 
         {children}
-
+        <Analytics/>
         <Footer />
 
       </body>
-      <Analytics/>
+      
     </html>
   )
 }
