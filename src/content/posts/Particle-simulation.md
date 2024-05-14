@@ -223,5 +223,5 @@ I had a great time exploring the fundamental concepts of physics and computer gr
 * **[Source code](https://github.com/salvaKaraka/Particle_simulation)**: Github repository with the project files.
 * **[Victor Gordan](https://www.youtube.com/@VictorGordan)**: Great graphics programming YouTube channel.
 * **[LearnOpenGL.com](https://learnopengl.com/Getting-started/Creating-a-window)**: The perfect E-book to start learning  OpenGL.
-* **["Writing a Physics Engine from scratch - collision detection optimization"](www.youtube.com/watch?v=9IULfQH7E90&t)**: A video I watched to learn about particle collisions.
+* **["Writing a Physics Engine from scratch - collision detection optimization"](https://www.youtube.com/watch?v=9IULfQH7E90&t)**: A video I watched to learn about particle collisions.
 * **[Video: "Coding Adventure: Simulating Fluids"](https://www.youtube.com/watch?v=rSKMYc1CQHE)**: Another video with a nice explanation of how particle simulations work.
