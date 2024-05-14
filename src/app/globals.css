@@ -42,6 +42,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: .5rem;
+  height: .5rem;
 }
 
 /* Track */
@@ -60,4 +61,63 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #222222;
 
+}
+
+
+/*markdown styles*/
+
+#post_container img {
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+#post_container h1 {
+  font-size: 2rem;
+}
+
+#post_container h2 {
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  border-top: rgb(64 64 64 / var(--tw-divide-opacity)) 1px solid;
+}
+
+#post_container h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#post_container {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#post_container a {
+  color: #6d28d9;
+  text-decoration: none;
+}
+
+#post_container a:hover {
+  color: #8a5cf6;
+}
+
+#post_container strong {
+  font-weight: 600;
+}
+
+#post_container blockquote {
+  border-left: 4px solid #8a5cf6;
+  padding-left: 1rem;
+  margin-left: 0;
+} 
+
+/*marker*/
+
+#post_container ::marker {
+  color: #8a5cf6;
+}
+#post_container ::marker ::marker {
+  color: #cfbaff;
 }

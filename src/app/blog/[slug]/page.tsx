@@ -38,7 +38,7 @@ export default function BlogPost(props: any) {
                     </Link>
                 </div>
 
-                <article className="prose dark:prose-invert max-w-4xl mx-auto text-slate-800 dark:text-slate-200">
+                <article id="post_container" className="prose dark:prose-invert max-w-4xl mx-auto text-slate-800 dark:text-slate-200">
                     <Markdown>{post.content}</Markdown>
                 </article>
 
