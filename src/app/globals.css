@@ -121,3 +121,13 @@ body {
 #post_container ::marker ::marker {
   color: #cfbaff;
 }
+
+@media screen and (max-width: 768px) {
+  #post_container ul {
+    margin-left: -25px; /* Reduce el margen izquierdo en dispositivos móviles */
+  }
+  
+  #post_container ul ul {
+    margin-left: -50px; /* Reduce el margen izquierdo de las listas anidadas en dispositivos móviles */
+  }
+}
