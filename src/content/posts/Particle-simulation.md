@@ -225,7 +225,7 @@ There are some things that I didn't notice when I was writing the code. I'm work
 
 * **Getters should be declared as const:** This is a common practice in C++ which I didn't know about at the moment of writing the program. Declaring the getters as const functions guarantees that they are not going to modify the state of the object they belong to. ***Solved! - 5/14/2024***
 
-* **Module responsibilities:** The function `draw()` from `Particle` is called by the collision handler. This is not correct because the collision handler's only responsibility should be updating particle positions. A way to fix this could be creating a separate object responsible for rendering the particles on the screen after each position update. ***Working on it***
+* **Module responsibilities:** The function draw() from Particle is called by the collision handler. This is not correct because the collision handler's only responsibility should be updating particle positions. A way to fix this could be creating a separate object responsible for rendering the particles on the screen after each position update. ***Working on it***
 
 * **Draw function:** My biggest mistake lies in the way I'm drawing the particles, and it goes hand in hand with the previously mentioned mistake. I'm currently compiling and binding the shaders and defining vertex positions for all the particles inside the draw() function on every iteration of the program. This is not good for performance and it shouldn't be done this way. We only need to compile and bind the shaders once, then we can use translation transformations to move the particles according to their position attribute. ***Working on it***
 
