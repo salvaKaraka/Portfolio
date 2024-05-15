@@ -26,7 +26,7 @@ Additionally, I added **gravity acceleration** to make the particles fall to the
 * **GLFW:** *It is a library that lets us create and modify OpenGL windows and receive inputs from the peripherals.*
 * **Glad:** *As most OpenGL functions' locations are not known at compile-time, they need to be queried at run-time. Glad solves this issue by managing these function pointers.*
 
-## Development process:
+## How does each part work? Lets see it step by step:
 * **Initialization:**  
 I started creating the main window using **GLFW**, then I initialized **Glad**. *I'm not going to go into much detail since it's not the focus of this project, but if you want to know how I did it, you can check the [Source code](https://github.com/salvaKaraka/Particle_simulation).*
 
@@ -34,13 +34,13 @@ I started creating the main window using **GLFW**, then I initialized **Glad**. 
 Then I defined the particle attributes:
 
 ```
-    std::vector<float> position;
-    std::vector<float> nextPosition;
+    std::array<float, 2> position;
+    std::array<float, 2> nextPosition;
     float mass;
     float radius;
-    std::vector<float> velocity;
-    std::vector<float> acceleration;
-    std::vector<float> color;
+    std::array<float, 2> velocity;
+    std::array<float, 2> acceleration;
+    std::array<float, 2> color;
 ```
 * **The graphics pipeline**:  
 To understand the rendering part, we first have to know how OpenGL works. It uses a rasterization pipeline to go from an array of vertices specified within the program to an image on the screen:
@@ -79,8 +79,8 @@ The Collision Handler consists of two main functions: **handleBorderCollisions**
 
         ```  
             void CollisionHandler::handleBorderCollisions(Particle& p) {
-                std::vector<float> velocity = p.getVelocity();
-                std::vector<float> position = p.getPosition();
+                std::array<float, 2> velocity = p.getVelocity();
+                std::array<float, 2> position = p.getPosition();
             
                 if (abs(p.getXPosition()) + p.getRadius() > width/2) {
                     // Reverse velocity and apply damping
@@ -117,7 +117,7 @@ The Collision Handler consists of two main functions: **handleBorderCollisions**
                     if (collide(p1, p2)) { //if there is a collision
                         
                         //distance between centers
-                        std::vector<float> diff_x(2);
+                        std::array<float, 2> diff_x;
                         diff_x[0] = xp1 - xp2;
                         diff_x[1] = yp1 - yp2;
                     
@@ -218,6 +218,19 @@ Here are some possible solutions to these problems:
 
 ## Conclusions:
 I had a great time exploring the fundamental concepts of physics and computer graphics. Despite having accomplished my goal of creating a simple particle simulation, now that I've learned so much, I feel the next step is applying this knowledge to improve performance, introduce interactive elements for users, enhance the visual representation of particles, or even create more complex simulations. Perhaps demonstrating a Gaussian distribution or refining the particle object for a fluid simulation. Stay tuned—I'll keep working on it!
+
+## Updates:
+There are some things that I didn't notice when I was writing the code. I'm working to fix these errors:
+* **Data structures:** Particle attributes are stored inside vectors, which are dynamic data structures that can change size during execution. This means they need to keep track of data positions because the data is not stored contiguously in memory. This is inefficient and can be improved by simply changing the data structures to arrays, which are statically defined at compile time and don't need to keep track of memory positions because the data is stored contiguously in memory. **[Learn more about it]([https://github.com/salvaKaraka/Particle_simulation](https://gameprogrammingpatterns.com/data-locality.html))**.  ***Solved! - 5/14/2024***
+
+* **Getters should be declared as const:** This is a common practice in C++ which I didn't know about at the moment of writing the program. Declaring the getters as const functions guarantees that they are not going to modify the state of the object they belong to. ***Solved! - 5/14/2024***
+
+* **Module responsibilities:** The function `draw()` from `Particle` is called by the collision handler. This is not correct because the collision handler's only responsibility should be updating particle positions. A way to fix this could be creating a separate object responsible for rendering the particles on the screen after each position update. ***Working on it***
+
+* **Draw function:** My biggest mistake lies in the way I'm drawing the particles, and it goes hand in hand with the previously mentioned mistake. I'm currently compiling and binding the shaders and defining vertex positions for all the particles inside the draw() function on every iteration of the program. This is not good for performance and it shouldn't be done this way. We only need to compile and bind the shaders once, then we can use translation transformations to move the particles according to their position attribute. ***Working on it***
+
+* **Bug in the collision algorithm:** The way I calculate particle positions in the simulation introduces a lack of full determinism, which means there's a chance of producing different results for the same input. Currently, I calculate and assign positions for each particle one by one. The better approach would be to compute the next position for all particles simultaneously, and then assign those positions to each particle at once. ***Working on it***
+
 
 ## Relevant links:
 * **[Source code](https://github.com/salvaKaraka/Particle_simulation)**: Github repository with the project files.
