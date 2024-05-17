@@ -2,7 +2,7 @@
 title: "Particle simulation - starting point"
 date: "2024-05-02"
 subtitle: "My first time using OpenGL."
-tags: "particle simulation", "cpp", "opengl"
+tags:
 ---
 
 # My first approach to the world of graphics programming.
