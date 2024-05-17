@@ -116,21 +116,26 @@ body {
 /*marker*/
 
 #post_container #disclaimer {
-  background-color: rgba(255, 0, 0, 0.5); /* Fondo rojo medio transparente */
-  border: 2px dashed rgba(255, 0, 0, 1); /* Borde redondeado con rayas discontinuas del mismo rojo, pero opaco */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 15px; /* Espaciado interno */
+  background-color: rgba(144, 0, 255, 0.5);
+  border: 2px dashed rgb(144, 0, 255);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-#post_container #disclaimer a {
-  color: #008000; /* Verde */
-  font-weight: bold; /* Negrita */
+#post_container #disclaimer h3{
+  font-weight: bold;
+  margin: .3rem;
 }
 
-#post_container #disclaimer a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón por encima */
-}
+#post_container #disclaimer a{
+  color: #98FF98;
+  text-decoration: none;
+} 
 
+#post_container #disclaimer a:hover{
+  color: #5cff5c;
+  text-decoration: underline;
+} 
 
 #post_container ::marker {
   color: #8a5cf6;
