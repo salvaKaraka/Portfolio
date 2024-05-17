@@ -5,7 +5,7 @@ subtitle: "A simple particle simulation. There is still a lot of work to be done
 tags:
 ---
 
-# My first approach to the world of graphics programming.}
+# My first approach to the world of graphics programming.
 
 <p id="disclaimer">I've learned a lot since I started this project, and I decided to do it again from scratch, applying the lessons from my mistakes. I won't delete this post because I think it is valuable to have a record of the errors that I encountered and their solutions. <br/> <a href="" target="_blank" rel="noopener noreferrer">To see the new version, click here</a></p>
 
