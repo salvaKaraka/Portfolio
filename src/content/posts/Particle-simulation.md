@@ -1,11 +1,13 @@
 ---
-title: "Particle simulation"
+title: "Particle simulation starting point"
 date: "2024-05-02"
 subtitle: "A simple particle simulation. There is still a lot of work to be done..."
 tags:
 ---
 
-# An approach to the world of graphics programming.
+# My first approach to the world of graphics programming.
+
+<p id="disclaimer">I've learned a lot making this project, and I decided to start it from scratch, learning from my mistakes. I won't delete this post because I think it is valuable to have a record of the errors that appeared and how I solved them. <br/> <a href="" target="_blank" rel="noopener noreferrer">To see the new version, click here</a></p>
 
 **Computer graphics** is a fascinating field of computer science. Who would have thought that, with just a couple of functions and basic physics principles, we could create fairly accurate **simulations of real-world natural systems**? I'm by no means an expert in this field, but I would like to become one in the future.  
 This is my first attempt at graphics programming using **OpenGL**. I hope you find this article useful or interesting, at least. **Enjoy!** [Source code](https://github.com/salvaKaraka/Particle_simulation).
