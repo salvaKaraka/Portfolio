@@ -31,7 +31,8 @@ Additionally, I added **gravity acceleration** to make the particles fall to the
 * **GLFW:** *It is a library that lets us create and modify OpenGL windows and receive inputs from the peripherals.*
 * **Glad:** *As most OpenGL functions' locations are not known at compile-time, they need to be queried at run-time. Glad solves this issue by managing these function pointers.*
 
-## How does each part work? Lets see:
+## How does each part work?
+
 * **Initialization:**  
 I started creating the main window using **GLFW**, then I initialized **Glad**. *I'm not going to go into much detail since it's not the focus of this project, but if you want to know how I did it, you can check the [Source code](https://github.com/salvaKaraka/Particle_simulation).*
 
