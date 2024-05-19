@@ -232,7 +232,7 @@ Here are some possible solutions to these problems:
 I had a great time exploring the fundamental concepts of physics and computer graphics. Despite having accomplished my goal of creating a simple particle simulation, now that I've learned so much, I feel the next step is applying this knowledge to improve performance, introduce interactive elements for users, enhance the visual representation of particles, or even create more complex simulations. Perhaps demonstrating a Gaussian distribution or refining the particle object for a fluid simulation. Stay tuned—I'll keep working on it!
 
 ## Updates:
-There are some things that I didn't notice when I was writing the code. I'm working to fix these errors:
+There are some things that I didn't notice when I was writing the article. I'm working to fix these errors:
 * **Data structures:** Particle attributes are stored inside vectors, which are dynamic data structures that can change size during execution. This means they need to keep track of data positions because the data is not stored contiguously in memory. This is inefficient and can be improved by simply changing the data structures to arrays, which are statically defined at compile time and don't need to keep track of memory positions because the data is stored contiguously in memory. **[Learn more about it]([https://github.com/salvaKaraka/Particle_simulation](https://gameprogrammingpatterns.com/data-locality.html))**.  ***Solved! - 5/14/2024***
 
 * **Getters should be declared as const:** This is a common practice in C++ which I didn't know about at the moment of writing the program. Declaring the getters as const functions guarantees that they are not going to modify the state of the object they belong to. ***Solved! - 5/14/2024***
