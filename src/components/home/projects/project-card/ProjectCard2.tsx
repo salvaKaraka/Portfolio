@@ -13,7 +13,7 @@ type props = {
 export default function ProjectCard2({ title, description, link, tags}: props) {
 
     return (
-        <div className='m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
+        <div className='md:max-w-[50%] m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
                 <div className='p-4'>
                     <Link href={link} target="_blank" rel="noopener noreferrer" className="group flex text-xl hover:text-purple-600 transition">
                         {title}
