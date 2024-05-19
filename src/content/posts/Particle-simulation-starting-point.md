@@ -236,6 +236,10 @@ There are some things that I didn't notice when I was writing the code. I'm work
 
 * **Bug in the collision algorithm:** The way I calculate particle positions in the simulation introduces a lack of full determinism, which means there's a chance of producing different results for the same input. Currently, I calculate and assign positions for each particle one by one. The better approach would be to compute the next position for all particles simultaneously, and then assign those positions to each particle at once. ***Working on it***
 
+* **This is how it looked before fixing this problems:**
+![Particles_old](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmdhcWpyYnI2Y2h0enExMjdxMGQyZmlodnl3M3JkbDF6bG5uOGs3OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7lddaMjsvCgLEh3Ugo/giphy.gif)
+As you can see, now we can simulate **MORE THAN ONE HUNDREAD TIMES** the ammount of particles we could then.
+
 
 ## Relevant links:
 * **[Source code](https://github.com/salvaKaraka/Particle_simulation)**: Github repository with the project files.
