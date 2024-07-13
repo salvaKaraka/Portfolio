@@ -15,39 +15,40 @@ tags:
 **Computer graphics** is a fascinating field of computer science. Who would have thought that, with just a couple of functions and basic physics principles, we could create fairly accurate **simulations of real-world natural systems**? I'm by no means an expert in this field, but I would like to become one in the future.  
 This is my first attempt at graphics programming using **OpenGL**. I hope you find this article useful or interesting, at least. **Enjoy!** [Source code](https://github.com/salvaKaraka/Particle_simulation).
 
-![Particles](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamd5MDdkazJrOHE4MTF3eG13cnZwam1wMTd4cTFla3FmbHR1dW5rYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Szu98O1hHYdhirAxIc/giphy.gif)
+<div id="two-images">
+
+<img src="/blog-images/Particle_simulation/Particles2.gif" alt="Paricles_with_gravity" />
+<img src="/blog-images/Particle_simulation/Particles3.gif" alt="Particles" />
+</div>
 
 ## What is this project about?
 
 My goal was learning **OpenGL** basics. I used **C++** to create a particle simulation, which has **three main parts**:
-1. **Entry point:** It is the main function, which contains an *"infinite"* loop to execute each step of the simulation.
-2. **Particles:** Each particle is an instance of the same **particle object**. They have velocity, acceleration, position, color, mass, among others.
-3. **Collision handler:** Its function is **detecting collisions** between particles and with the environment and **modifying the particle's position, velocity, and acceleration** accordingly.
-
-Additionally, I added **gravity acceleration** to make the particles fall to the ground and a **collision damping coefficient** so the system loses kinetic force with each impact. If the collisions were elastic *(meaning the system does not lose kinetic force with collisions)*, this coeficient would be set to 1.
-
+1. **Particles:** Each particle is an instance of the same **particle object**. They have velocity, acceleration, position, color, mass, among others.
+2. **Collision handler:** Its function is **detecting collisions** between particles and with the environment and **modifying the particle's position, velocity, and acceleration** accordingly.
+3. **Main file:** It is where everything comes together to run the program. Its main function contains an "infinite" loop to execute each step of the simulation.
+ 
+Additionally, I added some basic controls:
+* **W, A, S, D:** Change gravity direction.
+* **R:** Restart the simulation with the samee set of particles.
+* **N:** Generate a new set of particles.
 
 ## Libraries that I used:
 * **GLFW:** *It is a library that lets us create and modify OpenGL windows and receive inputs from the peripherals.*
 * **Glad:** *As most OpenGL functions' locations are not known at compile-time, they need to be queried at run-time. Glad solves this issue by managing these function pointers.*
+* **Glm:** *An OpenGL-specific math library.*
 
 ## How does each part work?
 
-* **Initialization:**  
-I started creating the main window using **GLFW**, then I initialized **Glad**. *I'm not going to go into much detail since it's not the focus of this project, but if you want to know how I did it, you can check the [Source code](https://github.com/salvaKaraka/Particle_simulation).*
+1. **Particles:**  
+Every particle has the following attributes:
+   * *Position.*
+   * *Velocity.*
+   * *Acceleration.*
+   * *Mass/Radius (the radius depends on the mass).*
+   * *Color.*  
 
-* **Particle Object:**  
-Then I defined the particle attributes:
-
-```
-    std::array<float, 2> position;
-    std::array<float, 2> nextPosition;
-    float mass;
-    float radius;
-    std::array<float, 2> velocity;
-    std::array<float, 2> acceleration;
-    std::array<float, 2> color;
-```
+They are randomly generated and stored into an arra
 
 * **Collision handler:**  
 Its job is to detect collisions and respond according laws of physics, ensuring that the particles interact realistically with each other and with the boundaries of the simulation environment.
@@ -245,7 +246,7 @@ There are some things that I didn't notice when I was writing the article. I'm w
 
 * **This is how it looked before fixing this problems:**
   
-![Particles_old](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmdhcWpyYnI2Y2h0enExMjdxMGQyZmlodnl3M3JkbDF6bG5uOGs3OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7lddaMjsvCgLEh3Ugo/giphy.gif)
+![Particles_old](/blog-images/Particle_simulation/Particles.gif)
 
 As you can see, now we can simulate **MORE THAN ONE HUNDREAD TIMES** the ammount of particles we could then.
 
