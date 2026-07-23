@@ -1,32 +1,37 @@
+"use client"
 import SocialPil from "../SocialPil";
 import SectionContainer from "../sections/SectionContainer";
+import { motion } from "framer-motion"
 
 export default function Introduction() {
 	return (
 		<SectionContainer className="mt-8">
-			<div className="flex flex-col md:flex-row items-center justify-center font-semibold gap-6">
-			<img loading="lazy" src="/images/salvador_karakachoff.webp" alt="Imagen de perfil de Salvador Karakachoff" className="rounded-full w-40 h-40" />
+			<motion.div 
+				initial={{ opacity: 0, y: 20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+				className="flex flex-col md:flex-row items-center justify-center font-semibold gap-6"
+			>
+				<img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4D03AQG4pZFnJxcjwQ/profile-displayphoto-crop_800_800/B4DZxycUD.HcAI-/0/1771446551841?e=1786579200&v=beta&t=qvLUltZarKeNm_pBQO2AjGWfdJCqQ3mgIBm-sTIRAvo" alt="Imagen de perfil de Salvador Karakachoff" className="rounded-full w-40 h-40 object-cover" />
 				<div>
-				<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold lg:gap-x-4 gap-x-2 items-center flex flex-wrap">
+				<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold lg:gap-x-4 gap-x-2 items-center flex flex-wrap pb-4 ">
 					Hi, I&apos;m Salvador! <span className="text-sm py-1 rounded-xl bg-blue-900/80 px-2">
 						<span className="text-blue-300/90">Ar</span><span className="text-white">ge</span><span
 							className="text-yellow-300/90">n</span
 						><span className="text-white">ti</span><span className="text-blue-300/90">na</span></span>
 				</h1>
-				<h2 className="text-xl lg:text-xl opacity-90 max-w-[700px] text-purple-800/90 dark:text-purple-400/90 mt-2">
-					Computer Engineering
-					<span className="text-black/90 dark:text-white/90">, passionate about</span> Graphics Programming.
+				<h2 className="text-xl lg:text-xl opacity-90 max-w-[700px] text-orange-800/90 dark:text-orange-400/90 mt-2">
+					Software Engineer
+					<span className="text-black/90 dark:text-white/90">, with experience in</span> Conversational AI Systems.
 				</h2>
-				<p className="text-lg max-w-[600px]">
-					Currently working as
-					<span className="text-blue-800/90 dark:text-blue-400/90"> IT Support</span> & <span className="text-blue-800/90 dark:text-blue-400/90">
-						Web Developer
+				<p className="text-lg max-w-[600px] mt-2">
+					Currently working as a
+					<span className="underline decoration-orange-500 decoration-2 underline-offset-4"> Software Engineer</span> at <span className="underline decoration-orange-500 decoration-2 underline-offset-4">
+						Kleva
 					</span>.
-					Graduated as
-					<span className="text-blue-800/90 dark:text-blue-400/90"> Electronics Technician</span>.
 				</p>
 				</div>
-			</div>
+			</motion.div>
 			<nav className="flex md:justify-center gap-2 mt-6 flex-wrap">
 					<SocialPil href="https://Linkedin.com/in/salvador-karakachoff/">
 						<svg className="size-4" width="256" height="256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256"><path d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453" fill="currentColor" /></svg>
@@ -38,13 +43,9 @@ export default function Introduction() {
 						GitHub
 					</SocialPil>
 
-					<SocialPil href="./CV_Salvador_Karakachoff_es.pdf">
-					<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-file-cv" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
-						CV en español (PDF)
-					</SocialPil>
 					<SocialPil href="./CV_Salvador_Karakachoff_en.pdf">
 					<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-file-cv" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
-						CV in english (PDF)
+						CV (PDF)
 					</SocialPil>
 					<SocialPil href="mailto:salvador.karakachoff@gmail.com">
 						<svg xmlns="http://www.w3.org/2000/svg" className="size-4 icon icon-tabler icon-tabler-mail-filled" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" strokeWidth="0" fill="currentColor" /><path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" strokeWidth="0" fill="currentColor" /></svg>

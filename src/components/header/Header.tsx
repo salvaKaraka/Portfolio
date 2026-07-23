@@ -74,14 +74,18 @@ export default function Header() {
 
     function secretEvent() {
         const secretBtn = document.getElementById("secretBtn") as HTMLAnchorElement;
+        const mascot = document.getElementById("mascot");
         setSecretCounter(secretCounter - 1);
         const secretTooltip = document.getElementById("secretTooltip");
         secretTooltip?.classList.remove("scale-0");
         secretTooltip?.classList.add("scale-100");
+        
+        mascot?.classList.add("animate-shake");
     
         setTimeout(() => {
             secretTooltip?.classList.remove("scale-100");
             secretTooltip?.classList.add("scale-0");
+            mascot?.classList.remove("animate-shake");
         }, 1500);
 
         if (secretCounter === 2) {

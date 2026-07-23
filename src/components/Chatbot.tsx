@@ -108,26 +108,26 @@ function Chatbot() {
                 <button
                 aria-label="Open chatbot"
                     id="robotBtn"
-                    className={`group border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 rounded-full p-1 absolute right-1 bottom-1 hover:scale-105 transition-all`}
+                    className={`group border backdrop-blur-2xl border-orange-500/30  dark:border-orange-500/40 bg-black/5 dark:bg-white/10 rounded-full p-1 absolute right-1 bottom-1 hover:scale-105 transition-all`}
                     onClick={() => toggleCollapsed(false)}
                 >    
                     <svg xmlns="http://www.w3.org/2000/svg" className="size-16 rounded-full group-hover:bg-black/10 dark:group-hover:bg-white/30 p-1 transition icon icon-tabler icon-tabler-robot" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M12 2v2" /><path d="M9 12v9" /><path d="M15 12v9" /><path d="M5 16l4 -2" /><path d="M15 14l4 2" /><path d="M9 18h6" /><path d="M10 8v.01" /><path d="M14 8v.01" /></svg>   
                 </button>
             ) : (
                 <div>
-                    <button aria-label="Close chatbot" className={`group border backdrop-blur-2xl border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10 rounded-full absolute -top-2 -left-2 cursor-pointer p-1 z-10 hover:scale-105 transition-all`} 
+                    <button aria-label="Close chatbot" className={`group border backdrop-blur-2xl border-orange-500/30  dark:border-orange-500/40 bg-black/5 dark:bg-white/10 rounded-full absolute -top-2 -left-2 cursor-pointer p-1 z-10 hover:scale-105 transition-all`} 
                     onClick={() => toggleCollapsed(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="size-5 rounded-full group-hover:bg-black/10 dark:group-hover:bg-white/30 p-[2px] transition icon icon-tabler icon-tabler-x" width="15" height="15" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
                     </button>
                     <div className={`border backdrop-blur-2xl flex flex-col gap-4 max-w-xl m-auto rounded-md p-6 pr-1 
-                         border-violet-500/30  dark:border-violet-500/40 bg-black/5 dark:bg-white/10`}>
+                         border-orange-500/30  dark:border-orange-500/40 bg-black/5 dark:bg-white/10`}>
                         <div ref={container} className="flex flex-col gap-4 h-[50vh] overflow-y-auto ">
                             {messages.map(({ id, text, type }) => (
                                 <div
                                     key={id}
                                     className={`rounded-xl p-2 mr-5 max-w-[80%] border border-black/10 dark:border-white/10 ${type === "bot"
                                         ? "bg-black/20 dark:bg-white/10 rounded-bl-none text-left self-start"
-                                        : "bg-violet-500/50 dark:bg-violet-500 rounded-br-none text-right self-end"
+                                        : "bg-orange-500/50 dark:bg-orange-500 rounded-br-none text-right self-end"
                                         }`}
                                 >
                                     {text}
@@ -143,14 +143,14 @@ function Chatbot() {
                                 value={question}
                                 onChange={(event) => setQuestion(event.target.value)}
                                 type="text"
-                                className="outline-none flex-1 w-full rounded-l-md border border-violet-500/50 dark:border-violet-500 bg-black/10 dark:bg-white/10 focus:bg-black/5 focus:dark:bg-white/20 px-4 py-2"
+                                className="outline-none flex-1 w-full rounded-l-md border border-orange-500/50 dark:border-orange-500 bg-black/10 dark:bg-white/10 focus:bg-black/5 focus:dark:bg-white/20 px-4 py-2"
                                 placeholder="Preguntame algo..."
                                 name="question"
                             />
                             <button
                                 disabled={isLoading}
                                 type="submit"
-                                className={`rounded-r-md border border-violet-500/50 dark:border-violet-500 hover:border-violet-300 hover:dark:border-violet-700 px-4 py-2 font-bold ${isLoading ? "bg-black/10 dark:bg-white/10 cursor-wait" : "bg-violet-500/50 dark:bg-violet-500 hover:bg-violet-300 hover:dark:bg-violet-700 cursor-pointer"
+                                className={`rounded-r-md border border-orange-500/50 dark:border-orange-500 hover:border-orange-300 hover:dark:border-orange-700 px-4 py-2 font-bold ${isLoading ? "bg-black/10 dark:bg-white/10 cursor-wait" : "bg-orange-500/50 dark:bg-orange-500 hover:bg-orange-300 hover:dark:bg-orange-700 cursor-pointer"
                                     }`}
                             >
                                 {isLoading ? <svg xmlns="http://www.w3.org/2000/svg" className="animate-spin icon icon-tabler icon-tabler-robot" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M12 2v2" /><path d="M9 12v9" /><path d="M15 12v9" /><path d="M5 16l4 -2" /><path d="M15 14l4 2" /><path d="M9 18h6" /><path d="M10 8v.01" /><path d="M14 8v.01" /></svg> : <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-robot" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" /><path d="M12 2v2" /><path d="M9 12v9" /><path d="M15 12v9" /><path d="M5 16l4 -2" /><path d="M15 14l4 2" /><path d="M9 18h6" /><path d="M10 8v.01" /><path d="M14 8v.01" /></svg>}

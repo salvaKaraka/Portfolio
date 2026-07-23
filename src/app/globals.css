@@ -31,6 +31,13 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  z-index: -10;
+  pointer-events: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -53,7 +60,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(138, 92, 246, 0.5);
+  background: rgba(255, 85, 0, 0.5);
   border-radius: 5px;
 }
 
@@ -110,12 +117,12 @@ body {
 }
 
 #post_container a {
-  color: #6d28d9;
+  color: #cc4400;
   text-decoration: none;
 }
 
 #post_container a:hover {
-  color: #8a5cf6;
+  color: #ff5500;
 }
 
 #post_container strong {
@@ -123,7 +130,7 @@ body {
 }
 
 #post_container blockquote {
-  border-left: 4px solid #8a5cf6;
+  border-left: 4px solid #ff5500;
   padding-left: 1rem;
   margin-left: 0;
 } 
@@ -131,8 +138,8 @@ body {
 /*marker*/
 
 #post_container #disclaimer {
-  background-color: rgba(144, 0, 255, 0.5);
-  border: 2px dashed rgb(144, 0, 255);
+  background-color: rgba(255, 85, 0, 0.1);
+  border: 2px dashed #ff5500;
   border-radius: 10px;
   padding: 1rem;
 }
@@ -153,10 +160,10 @@ body {
 } 
 
 #post_container ::marker {
-  color: #8a5cf6;
+  color: #ff5500;
 }
 #post_container ::marker ::marker {
-  color: #cfbaff;
+  color: #ffaa80;
 }
 
 @media screen and (max-width: 768px) {

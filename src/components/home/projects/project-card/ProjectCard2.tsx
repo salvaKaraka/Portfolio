@@ -15,10 +15,10 @@ export default function ProjectCard2({ title, description, link, tags}: props) {
     return (
         <div className='md:max-w-[50%] m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
                 <div className='p-4'>
-                    <Link href={link} target="_blank" rel="noopener noreferrer" className="group flex text-xl hover:text-purple-600 transition">
+                    <Link href={link} target="_blank" rel="noopener noreferrer" className="group flex text-xl hover:text-orange-600 transition">
                         {title}
                         <div className=' group-hover:scale-105 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-75'>
-                            <span className='text-purple-500 group-hover:text-purple-600'>↗</span>
+                            <span className='text-orange-500 group-hover:text-orange-600'>↗</span>
                         </div>
                     </Link>
                     <p className="mt-2 mb-2 text-lg text-neutral-600 dark:text-neutral-400 ">

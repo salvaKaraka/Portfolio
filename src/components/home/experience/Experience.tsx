@@ -1,26 +1,30 @@
+"use client"
 import HomeSectionContainer from "../../sections/HomeSectionContainer";
 import ExperienceItem from "./ExperienceItem";
+import { motion } from "framer-motion"
 
 const EXPERIENCE = [
     {
-        title: 'IT Support - Facultad de Ingeniería, Universidad Nacional de La Plata',
-        date: '2022 - Now',
-        description: 'Providing technical support to the entire administrative and teaching staff of the faculty involves implementing, maintaining, and configuring telephone and internet networks with over 2000 devices. Alongside this, I handle the repair of computers and electronic devices. Addressing each unique problem demands improvisation and on-the-fly learning, all while maintaining a professional approach.',
+        title: 'Software Engineer, AI Systems - Kleva',
+        date: 'Sep 2025 - Present',
+        description: 'Developing production conversational AI solutions for the lending and collections industry. Built the customer-facing analytics dashboard in Next.js and standardized agent development workflows, reducing development time and debugging effort significantly. Led the onboarding and technical mentoring of implementation engineers.',
     },
     {
-        title: 'Private Tutor',
-        date: '2021 - Now',
-        description: 'Offering private lessons to students across various academic levels, I specialize in mathematics, English, and computer science. This experience has significantly enhanced not only my communication and teaching skills but also my understanding of diverse learning needs.',
+        title: 'Data Engineer Intern - Club Estudiantes de La Plata',
+        date: 'Apr 2025 - Dec 2025',
+        description: 'Built an AI-ready data lakehouse unifying 4+ TB of heterogeneous organizational data to support analytics and LLM-powered applications. Developed ETL pipelines to transform and prepare high-volume datasets.',
     },
     {
-        title: 'Web Development - Freelance',
-        date: '2016 - Now',
-        description: 'Engaged in freelance web development, I am responsible for designing and developing web applications. Examples of my work can be explored on my GitHub or in the projects section, showcasing a range of projects and technical capabilities.',
-        link: "https://github.com/salvaKaraka"
+        title: 'Software Engineer - Consulting Engagement',
+        date: 'Jan 2024 - Apr 2025',
+        description: 'Designed and built a production conversational SQL agent enabling 3,000+ employees to query HR information through WhatsApp and Slack using LLMs, RAG and FastAPI.',
+    },
+    {
+        title: 'Freelance Web Development',
+        date: 'Jan 2022 - Jan 2024',
+        description: 'Engaged in freelance web development, designing and building custom web applications with a focus on optimized SEO, performance, and modern UI/UX.',
     }
 ] 
-
-
 
 export default function Experience() {
 

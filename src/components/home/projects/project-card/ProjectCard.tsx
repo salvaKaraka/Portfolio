@@ -16,14 +16,14 @@ type props = {
 export default function ProjectCard({ title, description, link, model, tags, shadowPosition }: props) {
 
     return (
-        <div className='w-full m-auto border border-neutral-400 dark:border-neutral-700 p-2 rounded-xl'>
+        <div className='w-full m-auto border border-orange-500/20 backdrop-blur-xl bg-white/5 dark:bg-black/10 p-2 rounded-xl shadow-lg transition-all hover:bg-white/10 dark:hover:bg-black/20'>
             <div className='flex flex-col md:flex-row '>
                 <div className='p-4'>
 
-                    <Link href={link} target="_blank" rel="noopener noreferrer" className="group flex text-xl md:text-2xl hover:text-purple-600 transition">
+                    <Link href={link} target="_blank" rel="noopener noreferrer" className="group flex text-xl md:text-2xl hover:text-orange-600 transition">
                         {title}
                         <div className=' group-hover:scale-105 group-hover:translate-x-1 group-hover:-translate-y-1 transition duration-75'>
-                            <span className='text-purple-500 group-hover:text-purple-600'>↗</span>
+                            <span className='text-orange-500 group-hover:text-orange-600'>↗</span>
                         </div>
                     </Link>
 

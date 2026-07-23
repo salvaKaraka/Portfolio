@@ -1,12 +1,30 @@
+"use client"
 import HomeSectionContainer from "../../sections/HomeSectionContainer";
 import ProjectCard from "./project-card/ProjectCard";
-import ProjectCard2 from "./project-card/ProjectCard2";
 import dynamic from 'next/dynamic'
+import { motion } from "framer-motion"
 
-const Living3DModel = dynamic(() => import('@/../public/models/citybellverde/Living3DModel'), { ssr: false })
 const Sphere3DModel = dynamic(() => import('@/../public/models/particle_simulation/Sphere3DModel'), { ssr: false })
+const Robot3DModel = dynamic(() => import('@/../public/models/meinlup/Robot3DModel'), { ssr: false })
+const F1Car3DModel = dynamic(() => import('@/../public/models/f1/F1Car3DModel'), { ssr: false })
 
 const PROJECTS = [
+    {
+        title: "Meinlup - AI Receptionist Platform",
+        description:
+            "Multi-tenant platform to operate custom omnichannel AI agents.",
+        link: "https://meinlup.com",
+        model: <Robot3DModel />,
+        tags: ["Next.js", "LiveKit", "FastAPI", "Supabase"],
+    },
+    {
+        title: "Formula 1 Machine Learning", 
+        description:
+            "Trained predictive models on historical F1 data, achieving ~90% accuracy.",
+        link: "https://www.linkedin.com/in/salvador-karakachoff/overlay/Project/1814680863/treasury/?profileId=ACoAADZMpuoByscXbQmgV0i8abW8pvTlVLLWQCU&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B1yjVArXITrmESH4LN9gpUg%3D%3D",
+        model: <F1Car3DModel />,
+        tags: ["Python", "Machine Learning"],
+    },
     {
         title: "Particle simulation - Interactions between particles and with the environment",
         description:
@@ -15,40 +33,20 @@ const PROJECTS = [
         model: <Sphere3DModel />,
         tags: ["C++","OpenGL"],
     },
-    {
-        title: "City Bell Verde - Cabin Rental",
-        description:
-            "Built from scratch using only HTML, CSS, JavaScript, and PHP. Featuring optimized SEO and excellent performance.",
-        link: "https://citybellverde.com",
-        model: <Living3DModel/>,
-        shadowPosition: -1.3,
-        tags: ["HTML", "CSS", "JavaScript", "PHP"],
-    }, 
-];
-
-const PROJECTS_2 = [
-    {
-        title: "Personal Chatbot - Chat with Me",
-        description:
-            "A personalized chatbot to answer questions about my job. Developed using the Co:Here sorting API",
-        link: "https://chatbot.salvadorkarakachoff.com",
-        tags: ["Next.js", "React", "TypeScript", "Tailwind CSS","Cohere's API" ],
-    },
-    {
-        title: "QR Generator - Generate QR codes for your links", 
-        description:
-            "A simple way to generate QR codes for your links and download them as PNG images.",
-        link: "https://qr.salvadorkarakachoff.com",
-        tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", ],
-    },
 ];
 
 export default function Projects() {
     
     return (
-        <HomeSectionContainer title="Projects">
+        <HomeSectionContainer title="Featured projects">
 
-            <div className='flex flex-col gap-5 mt-16'>
+            <motion.div 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6 }}
+                className='flex flex-col gap-5 mt-16'
+            >
                 {PROJECTS.map(({ title, description, link, model, shadowPosition, tags }, index) => (
                     
                     <ProjectCard
@@ -62,21 +60,7 @@ export default function Projects() {
                     />
 
                     ))}
-            </div>
-            
-            <div className='flex flex-col md:flex-row gap-5 mt-5'>
-                {PROJECTS_2.map(({ title, description, link, tags }, index) => (
-                    
-                    <ProjectCard2
-                        key={index}
-                        title={title}
-                        description={description}
-                        link={link}
-                        tags={tags}
-                    />
-
-                    ))}
-            </div>
+            </motion.div>
 
         </HomeSectionContainer>
     )
