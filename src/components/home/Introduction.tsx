@@ -12,6 +12,7 @@ export default function Introduction() {
 				transition={{ duration: 0.5 }}
 				className="flex flex-col md:flex-row items-center justify-center font-semibold gap-6"
 			>
+				{/* eslint-disable-next-line @next/next/no-img-element */}
 				<img loading="lazy" src="https://media.licdn.com/dms/image/v2/D4D03AQG4pZFnJxcjwQ/profile-displayphoto-crop_800_800/B4DZxycUD.HcAI-/0/1771446551841?e=1786579200&v=beta&t=qvLUltZarKeNm_pBQO2AjGWfdJCqQ3mgIBm-sTIRAvo" alt="Imagen de perfil de Salvador Karakachoff" className="rounded-full w-40 h-40 object-cover" />
 				<div>
 				<h1 className="text-2xl sm:text-3xl md:text-5xl font-bold lg:gap-x-4 gap-x-2 items-center flex flex-wrap pb-4 ">

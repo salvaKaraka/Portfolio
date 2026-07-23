@@ -47,7 +47,7 @@ export default function Projects() {
                 transition={{ duration: 0.6 }}
                 className='flex flex-col gap-5 mt-16'
             >
-                {PROJECTS.map(({ title, description, link, model, shadowPosition, tags }, index) => (
+                {PROJECTS.map(({ title, description, link, model, tags }, index) => (
                     
                     <ProjectCard
                         key={index}
@@ -55,7 +55,7 @@ export default function Projects() {
                         description={description}
                         link={link}
                         model={model}
-                        shadowPosition={shadowPosition? [0,shadowPosition,0] : [0,-2.5,0]}
+                        shadowPosition={[0,-2.5,0]}
                         tags={tags}
                     />
 
